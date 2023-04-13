@@ -1,0 +1,87 @@
+@CHARSET "UTF-8";
+
+.ui-jqgrid .ui-jqgrid-btable {
+	/* table-layout: auto; */
+	font-size: 14px !important;
+}
+
+.ui-jqgrid-titlebar {
+	font-size: 1.5em !important;
+	font-weight: normal;
+	color: #363636 ;
+}
+
+.ui-jqgrid-view{
+	font-size: 14px !important;
+}
+
+.ui-jqgrid tr.ui-row-ltr td {
+	padding-top: 10px;
+	padding-left: 5px;
+	height: auto;
+}
+
+.ui-jqgrid tr.jqgrow td {
+   word-wrap: break-word;
+   white-space: normal !important;
+   height: auto;
+   vertical-align: middle;
+   padding-top: 2px;
+ }
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-highlight{
+	background: #5a8db6 !important;
+	color: #000000;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default {
+	text-shadow: none !important;
+	font-weight: normal;
+	color: #363636;
+	padding-top: 2px;
+}
+
+.ui-widget-header {
+	border: 1px solid #275b7f;
+}
+
+.ui-widget-content {
+	border: 1px solid #275b7f;
+}
+
+.ui-jqgrid .ui-jqgrid-title {
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.table-bordered>tbody>tr>td {
+	border-top: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.jqgfirstrow td {
+	height: 0px;
+	border: 0px !important;
+}
+
+.ui-jqgrid .ui-jqgrid-sortable {
+   white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word;      /* IE */
+}
+
+.ui-jqgrid .ui-jqgrid-htable th div {
+	height: auto !important;
+}
+
+/* remove corner */
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl, .ui-corner-right, .ui-corner-tr, .ui-corner-bottom, .ui-corner-bl, .ui-corner-br {
+    border-radius:0;
+    -moz-border-radius:0;
+    -webkit-border-radius:0;
+    -khtml-border-radius:0;
+}

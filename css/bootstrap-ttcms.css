@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+
+.table-hover-btn {
+	display: none;
+}
+
+.table-hover>tbody>tr:hover table-hover-btn, .table-hover>tbody>tr:hover .table-hover-btn
+	{
+	display: block;
+	opacity: 0.8;
+	float: right;
+}
+
+ul.errorMessage {
+	font-weight: bold;
+	color: red;
+	list-style-type: none;
+}
+
+.vert-align td {
+	vertical-align: middle !important;
+}
+/*取消input type number 增加或減少鈕*/
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button
+	{
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+@media (min-width: 992px) {
+	.modal-lg {
+	  min-width: 900px;
+	  width: 90%;
+	}
+}
+
+@media (min-width: 768px) {
+	.modal-lg {
+	  min-width: 700px;
+	  width: 90%;
+	}
+}
