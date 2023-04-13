@@ -1,0 +1,1183 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="googlebot" content="noindex">
+<title>ADM</title>
+
+<link rel="stylesheet" href="devoopsv2/plugins/bootstrap/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="css/classic.css" /> -->
+<link rel="stylesheet" href="devoopsv2/plugins/jquery-ui/jquery-ui.css">
+<link rel="stylesheet" href="devoopsv2/css/style_v2.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="jqGrid/css/ui.jqgrid.css">
+<link rel="stylesheet" href="css/jqGrid.bootstrap.css">
+<link rel="stylesheet" href="css/jquery-validation-1.13.1/validate.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/jqgrid.ttcms.css">
+<link rel="stylesheet" href="css/bootstrap-ttcms.css">
+<!-- bootstrap-toggle css -->
+<link rel="stylesheet" href="js/bootstrap-plugin/bootstrap-toggle-master/css/bootstrap-toggle.min.css">
+
+<!--Demo UI暫用-->
+<style type="text/css">
+.fancybox-margin{margin-right:17px;}
+body{font-family:Microsoft JhengHei;}
+button, .btn, .btn-info{font-family:Microsoft JhengHei; font-size:105%;}
+
+.ui-state-default table{width:500px;border:0;margin:100px auto 0;text-align:center;border-collapse:collapse;border-spacing:0;}
+.ui-state-default table th{background:#0090D7;font-weight:normal;line-height:30px;font-size:14px;color:#FFF;}
+.ui-state-default table tr:nth-child(odd){background:#F4F4F4;}
+.ui-state-default table tr:hover{background:#73B1E0;color:#FFF;}
+.ui-state-default table td,table th{border:1px solid #EEE;}
+.ui-state-default table tr:hover a{color:#FFF;}
+td {empty-cells:show;}
+</style>
+
+<link rel="stylesheet" href="css/temp-demo.css">
+
+<!--script type="text/javascript">
+if (typeof String.prototype.startsWith != 'function') {
+	String.prototype.startsWith = function (str){
+		return this.indexOf(str) == 0;
+	};
+}
+
+String.prototype.endsWith = function(suffix) {
+	return this.indexOf(suffix, this.length - suffix.length) !== -1;
+};
+</script>
+<script src="devoopsv2/plugins/jquery/jquery.min.js"></script>
+<script src="devoopsv2/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="devoopsv2/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="jqGrid/js/i18n/grid.locale-tw.js"></script>
+<script src="jqGrid/js/jquery.jqGrid.min.js"></script>
+<script src="js/jqGrid-define.js"></script>
+<script src="devoopsv2/js/devoops.js"></script>
+<script src="jquery-validation-1.13.1/dist/jquery.validate.min.js"></script>
+<script src="jquery-validation-1.13.1/dist/localization/messages_zh_TW.js"></script>
+<script src="jquery-validation-1.13.1/dist/additional-methods.min.js"></script>
+<script type="text/javascript" src="js/common/jquery-validation-define.js"></script>
+<script src="js/bootstrap-growl.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-plugin/bootbox.min.js"></script>
+<script type="text/javascript" src="js/bootbox-define.js"></script>
+<script src="js/jquery-plugin.js"></script>
+<script type="text/javascript" src="js/window-define.js"></script>
+<script type="text/javascript" src="js/common/buildUuid.js"></script>
+<script type="text/javascript" src="datetimepicker/build/jquery.datetimepicker.full.min.js"></script>
+<script type="text/javascript" src="js/common/customDatePicker.js"></script>
+<script type="text/javascript" src="js/ttMessage.js"></script>
+<script type="text/javascript">
+	TTMessage.options.messageMap = {"0090":{"code":"0090","content":"刪除時相關語系的資料會一併刪除，是否確定刪除?","type":1066},"0097":{"code":"0097","content":"{0}-限定為會內Email","type":1066},"0010":{"code":"0010","content":"{0}-欄位格式不符","type":1069},"0098":{"code":"0098","content":"{0}-起日必須小於迄日","type":1066},"0095":{"code":"0095","content":"本訂單已處理完成，無法重覆下單","type":1067},"0096":{"code":"0096","content":"{0}-長度限制為{1}字","type":1066},"0093":{"code":"0093","content":"送出成功","type":1066},"0094":{"code":"0094","content":"送出失敗","type":1069},"0091":{"code":"0091","content":"總匯入筆數：{0}筆、成功：{0}筆、失敗：{0}筆","type":1068},"0092":{"code":"0092","content":"外館審核頁面填寫已完成，無法重複填寫","type":1066},"0006":{"code":"0006","content":"刪除失敗","type":1069},"0007":{"code":"0007","content":"匯入成功","type":1066},"0004":{"code":"0004","content":"修改失敗","type":1069},"0125":{"code":"0125","content":"貴公司在「台灣經貿網」可曝光型錄數為 <b>{0}</b> 張，目前已啟用型錄有 <b>{1}</b> 張，還可再啟用 <b>{2}</b> 張做為曝光型錄。","type":1068},"0005":{"code":"0005","content":"刪除成功","type":1066},"0002":{"code":"0002","content":"新增失敗","type":1069},"0123":{"code":"0123","content":"自訂網址名稱不可含特殊符號","type":1069},"0003":{"code":"0003","content":"修改成功","type":1066},"0124":{"code":"0124","content":"貴公司啟用型錄數已達 {0}張上限，是否要成為企業會員，不受啟用張數限制？歡迎洽詢客服專線 0800-506-088","type":1068},"0088":{"code":"0088","content":"是否要繼續編輯{0}？","type":1066},"0121":{"code":"0121","content":"請至少勾選二筆資料","type":1067},"0089":{"code":"0089","content":"檔案過大, 圖檔大小限制: {0}, gif檔大小限制: {0}","type":1069},"0001":{"code":"0001","content":"新增成功","type":1066},"0122":{"code":"0122","content":"超過圖片上傳最大限制 {0} 張","type":1069},"0008":{"code":"0008","content":"匯入失敗","type":1069},"0009":{"code":"0009","content":"{0}-必填欄位未填","type":1067},"0020":{"code":"0020","content":"匯出失敗","type":1066},"0021":{"code":"0021","content":"請至少勾選一筆資料","type":1066},"0017":{"code":"0017","content":"列印成功","type":1066},"0018":{"code":"0018","content":"列印失敗","type":1069},"0015":{"code":"0015","content":"此公司資料已存在","type":1069},"0016":{"code":"0016","content":"查無符合的資料","type":1066},"0013":{"code":"0013","content":"是否確認刪除","type":1067},"0014":{"code":"0014","content":"此登入帳號無效","type":1066},"0099":{"code":"0099","content":"上傳檔案格式不符","type":1069},"0011":{"code":"0011","content":"{0}-資料已存在","type":1069},"0012":{"code":"0012","content":"資料已被使用，不可刪除","type":1069},"0019":{"code":"0019","content":"匯出成功","type":1066},"0031":{"code":"0031","content":"關鍵字-{0}不可使用","type":1066},"0032":{"code":"0032","content":"輸入的型錄名稱:{0}，因營運政策，需待審核人員通過後才可上架","type":1066},"0030":{"code":"0030","content":"勾選資料包含非黑名單資料","type":1066},"0028":{"code":"0028","content":"寄送失敗","type":1066},"0029":{"code":"0029","content":"勾選資料包含黑名單資料","type":1066},"0026":{"code":"0026","content":"資料已送出，待排程作業執行","type":1066},"0027":{"code":"0027","content":"寄送成功","type":1066},"0024":{"code":"0024","content":"審核失敗","type":1066},"0025":{"code":"0025","content":"資料已送出，待人員審核","type":1066},"0022":{"code":"0022","content":"選擇的資料已送過{0}翻譯，是否仍要翻譯?","type":1066},"0023":{"code":"0023","content":"審核成功","type":1066},"0042":{"code":"0042","content":"輸入的{0}-{1}不存在","type":1066},"0043":{"code":"0043","content":"申請送出成功","type":1066},"0040":{"code":"0040","content":"分數加總不可超過{0}分","type":1066},"0041":{"code":"0041","content":"需為數字","type":1069},"0039":{"code":"0039","content":"型錄名稱{0}具黑名單中的關鍵字","type":1066},"0037":{"code":"0037","content":"該型錄為必審型錄","type":1066},"0038":{"code":"0038","content":"關鍵字{0}在黑名單中","type":1066},"0035":{"code":"0035","content":"輸入的產品分類:{0}，因營運政策，需待審核人員通過後才可上架","type":1066},"0036":{"code":"0036","content":"本型錄與其它型錄({0})的欄位資料重覆","type":1066},"0033":{"code":"0033","content":"輸入的產業別:{0}，因營運政策，需待審核人員通過後才可上架","type":1066},"0034":{"code":"0034","content":"輸入的關鍵字:{0}，因營運政策，需待審核人員通過後才可上架","type":1066},"0053":{"code":"0053","content":"{0}資料已變更，請於{0}內點選確認信完成修改","type":1066},"0054":{"code":"0054","content":"是否確認取消","type":1066},"0051":{"code":"0051","content":"超過可設定的上限數量{0}，請重新設定","type":1067},"0052":{"code":"0052","content":"是否確認修改{0}","type":1066},"0050":{"code":"0050","content":"{0}只能申請{0}次","type":1066},"0048":{"code":"0048","content":"是否確認修改，修改後， 原分類下的所有型錄， 全部歸類於Other","type":1066},"0049":{"code":"0049","content":"請先關閉 {0} 或 {0}，再新增{0}","type":1066},"0046":{"code":"0046","content":"是否確認刪除，刪除後，此分類下的所有型錄， 全部歸類於Other","type":1066},"0047":{"code":"0047","content":"是否確認匯入，匯入後， 原分類下的所有型錄， 全部歸類於Other","type":1066},"0044":{"code":"0044","content":"申請送出失敗","type":1069},"0045":{"code":"0045","content":"匯入完畢","type":1066},"0064":{"code":"0064","content":"是否確定搬移？","type":1066},"0065":{"code":"0065","content":"目的端公司屬於eCatalog會員，型錄使用限制為{0}張，","type":1066},"0062":{"code":"0062","content":"{0}和{1}，資料相同","type":1066},"0063":{"code":"0063","content":"{0}輸入錯誤\\n原因:{1}","type":1066},"0060":{"code":"0060","content":"匯入檔案格式不符，請檢查調整後重新匯入","type":1066},"0061":{"code":"0061","content":"是否確認返回?","type":1066},"0059":{"code":"0059","content":"您已完成回娘家 確認Email的動作， 請使用email、密碼登入。","type":1066},"0057":{"code":"0057","content":"您尚未完成email確認，請至email點選確認信完成或點選重新寄送","type":1066},"0058":{"code":"0058","content":"{0}輸入錯誤，請重新輸入","type":1069},"0055":{"code":"0055","content":"取消成功","type":1066},"0056":{"code":"0056","content":"取消失敗","type":1066},"0075":{"code":"0075","content":"提醒您，您即將連結到非台灣經貿網的網站，請小心處理。","type":1066},"0076":{"code":"0076","content":"是否要儲存為自訂範本","type":1066},"0073":{"code":"0073","content":"本日翻譯作業已滿，今日不再提供翻譯","type":1066},"0074":{"code":"0074","content":"供應商將取得您的連絡資訊，包括：email…等","type":1066},"0071":{"code":"0071","content":"付款失敗，請重新挑選付款方式","type":1066},"0072":{"code":"0072","content":"翻譯字數大於可使用字數","type":1069},"0070":{"code":"0070","content":"是否確定刪除目錄及所有子目錄？","type":1066},"0105":{"code":"0105","content":"貴公司目前為台灣經貿網的「{0}」","type":1068},"0106":{"code":"0106","content":"貴公司企業網頁使用到期日:{0}","type":1068},"0103":{"code":"0103","content":"103 尚未完成配對，無配對結果。","type":1068},"0104":{"code":"0104","content":"已被加入黑名單的買主將無法審核通過！","type":1067},"0068":{"code":"0068","content":"執行失敗","type":1066},"0101":{"code":"0101","content":"是否確定要送到採洽易？","type":1068},"0069":{"code":"0069","content":"{0}已被翻譯過，是否要排除？ ","type":1066},"0102":{"code":"0102","content":"配對完畢，無符合的配對資料。","type":1068},"0066":{"code":"0066","content":"統一編號不存在","type":1066},"0067":{"code":"0067","content":"執行成功","type":1066},"0100":{"code":"0100","content":"勾選資料中，已被加入黑名單的買主將無法審核通過！","type":1067},"0109":{"code":"0109","content":"Attachment超過上傳大小","type":1069},"0107":{"code":"0107","content":"貴公司在「台灣經貿網」可建置的型錄張數為{0}張，目前己建置{1}張，您還可以繼續新增{2}張型錄","type":1068},"0108":{"code":"0108","content":"查看服務內容：請點選這裡，會開啟一新視窗，告知您的會員專屬權益。","type":1068},"0086":{"code":"0086","content":"圖檔尺寸有誤，建議圖片寬、高的尺寸至少大於或等於{0}！","type":1066},"0087":{"code":"0087","content":"是否存檔？","type":1066},"0120":{"code":"0120","content":"You can only choose {0} category !","type":1069},"0084":{"code":"0084","content":"部份資料已被使用，不可刪除。","type":1066},"0085":{"code":"0085","content":"尚未選取任何資料！","type":1066},"0082":{"code":"0082","content":"排程已使用此範本，無法停用","type":1066},"0083":{"code":"0083","content":"{0}：一週內的張貼則數({1}則)已達上限，目前不可再張貼！","type":1066},"0080":{"code":"0080","content":" 此為{0}帳號， 請使用{0}的忘記密碼功能","type":1066},"0081":{"code":"0081","content":"查無符合的資料，是否要前往註冊成為{0}?","type":1066},"0116":{"code":"0116","content":"名稱內不可含有 | \\ ＠ 特殊符號","type":1069},"0117":{"code":"0117","content":"權限不足，無法刪除總管理者。","type":1069},"0114":{"code":"0114","content":"請點選 {0}碼產業別!!","type":1069},"0115":{"code":"0115","content":"格式不符","type":1067},"0079":{"code":"0079","content":"此為{0}帳號， 請使用{1}方式登入","type":1066},"0112":{"code":"0112","content":"請輸入查詢關鍵字!!","type":1067},"0113":{"code":"0113","content":"此特殊產業將有警語顯示於網頁下方","type":1067},"0077":{"code":"0077","content":"無使用權限","type":1066},"0110":{"code":"0110","content":"Preferred Meeting Date欄位，起始日大於迄日","type":1069},"0078":{"code":"0078","content":"預設語系：{0} 網的資料未填寫完整，請點此{0}調整內容","type":1066},"0111":{"code":"0111","content":"請點選一個 {0}","type":1067},"0118":{"code":"0118","content":"刪除自己的帳號是不被允許的","type":1069},"0119":{"code":"0119","content":"已選取相同產業別!!","type":1069}};
+</script>
+<script src="js/bootstrap-ttcms.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/bootstrap-plugin/bootstrap-toggle-master/js/bootstrap-toggle.min.js"></script>
+<script type="text/javascript" src="js/codeMeta-tw.js"></script>
+<script type="text/javascript">
+	var $jqueryDateTimeFormat = "yyyy-MM-dd hh:mm p";
+</script-->
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+<div class="container-fluid expanded-panel">
+
+<div class="row">
+	<div id="logo" class="col-xs-12 col-sm-6">
+		<a class="brand" href="">TTADM 台灣經貿網內容管理平台</a>
+	</div>
+	<div id="top-panel" class="col-xs-12 col-sm-6">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 top-panel-right">
+				<ul class="nav navbar-nav pull-right panel-menu">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle account" data-toggle="dropdown">
+							<div class="avatar">
+								<img src="devoopsv2/img/avatar.jpg" class="img-circle" alt="avatar">
+							</div>
+							<!--i class="fa fa-angle-down pull-right"></i-->
+							<i class="pull-right"><img src="images/if_ic_expand_more_48px_352330.png" /></i>
+							<div class="user-mini pull-right">
+								<span class="welcome">Welcome,</span>
+								<span>劉佳淇</span>
+							</div>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="/personalInfoeditShow">
+									<!--i class="fa fa-user"></i-->
+									<img src="images/if_ic_expand_more_48px_352330.png" />
+									<span>Profile</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://sso.ttstaging.com.tw/logout?service=http%3A%2F%2Fadm.ttstaging.com.tw%2Flogout">
+									<!--i class="fa fa-power-off"></i-->
+									<img src="images/if_ic_expand_more_48px_352330.png" />
+									<span>Logout</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>
+										 20180809_123816-revba4f09b
+									</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</header>
+
+<div id="main" class="container-fluid" style="min-height: 582px;">
+<div class="row">
+<div id="sidebar-left" class="col-xs-2 col-sm-2">
+				
+
+<ul id="left_menu" class="nav main-menu">
+	
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">帳務</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="financeAnnualPlanlist" href="financeAnnualPlanlist?actionNew">
+								工作計畫管理
+						</a></li>
+						<li><a id="financeTPMainlist" href="financeTPMainlist?actionNew">
+								TP專輯管理
+						</a></li>
+						<li><a id="financeTPYearlist" href="financeTPYearlist?actionNew">
+								TP專輯年度管理
+						</a></li>
+						<li><a id="financePageLayoutMainlist" href="financePageLayoutMainlist?actionNew">
+								TP專輯版位管理
+						</a></li>
+						<li><a id="financePaymentMethodeditShow" href="financePaymentMethodeditShow?actionNew">
+								付款方式說明設定
+						</a></li>
+						<li><a id="financeProductlist" href="financeProductlist?actionNew">
+								產品管理
+						</a></li>
+						<li><a id="financePlanlist" href="financePlanlist?actionNew">
+								方案管理
+						</a></li>
+						<li><a id="financeProductgiftList" href="financeProductgiftList?actionNew">
+								私房禮管理
+						</a></li>
+						<li><a id="financePurchaseOrderlist" href="financePurchaseOrderlist?actionNew">
+								訂單管理
+						</a></li>
+						<li><a id="financePoShipmentlist" href="financePoShipmentlist?actionNew">
+								出貨管理
+						</a></li>
+						<li><a id="financeThrowAccountinglist" href="financeThrowAccountinglist?actionNew">
+								訂單拋轉財務系統
+						</a></li>
+						<li><a id="financePostlist" href="financePostlist?actionNew">
+								掛號郵件登錄
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">帳務報表</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="financeMemberReportlist" href="financeMemberReportlist?actionNew">
+								會員訂單統計
+						</a></li>
+						<li><a id="financePromoteReportlist" href="financePromoteReportlist?actionNew">
+								徵集推廣績效
+						</a></li>
+						<li><a id="financeTPReportlist" href="financeTPReportlist?actionNew">
+								TP專輯表
+						</a></li>
+						<li><a id="financePerformanceTargetlist" href="financePerformanceTargetlist?actionNew">
+								每日業績目標統計
+						</a></li>
+						<li><a id="financeRceivableReportlist" href="financeRceivableReportlist?actionNew">
+								客服人員追款分析
+						</a></li>
+						<li><a id="financeAllowanceReportlist" href="financeAllowanceReportlist?actionNew">
+								客服人員加給統計
+						</a></li>
+						<li><a id="financeEpMemberOrderReportlist" href="financeEpMemberOrderReportlist?actionNew">
+								會員家數
+						</a></li>
+						<li><a id="financeTpSubscribeReportlist" href="financeTpSubscribeReportlist?actionNew">
+								TP專輯續訂率報表
+						</a></li>
+						<li><a id="financeTpAnalyticReportlist" href="financeTpAnalyticReportlist?actionNew">
+								續訂率分析報表
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">交易訂單、金鑰管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="hitrustkeymanagementlist" href="hitrustkeymanagementlist?actionNew">
+								HiTrust金鑰管理
+						</a></li>
+						<li><a id="paymentmanagementlist" href="paymentmanagementlist?actionNew">
+								玉山兩岸支付通認證管理
+						</a></li>
+						<li><a id="ezOrderlist" href="ezOrderlist?actionNew">
+								交易訂單管理
+						</a></li>
+				</ul>
+			</li>
+<!-- no child -->
+			<li><a id="dashboard" href="dashboard"> <span class="hidden-xs">資訊儀表板</span></a></li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">系統管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="userlist" href="userlist?actionNew">
+								使用者管理
+						</a></li>
+						<li><a id="rolelist" href="rolelist?actionNew">
+								角色管理
+						</a></li>
+						<li><a id="codemetalist" href="codemetalist?actionNew">
+								代碼管理
+						</a></li>
+						<li><a id="usereditShowPasswordRule" href="usereditShowPasswordRule?actionNew">
+								密碼規則管理
+						</a></li>
+						<li><a id="passwordlogforcompanyuserlist" href="passwordlogforcompanyuserlist?actionNew">
+								密碼寄送記錄管理
+						</a></li>
+						<li><a id="parameterlist" href="parameterlist?actionNew">
+								參數管理
+						</a></li>
+						<li><a id="verifyGroupgroupList" href="verifyGroupgroupList?actionNew">
+								權限群組管理
+						</a></li>
+						<li><a id="catalogstandardlist" href="catalogstandardlist?actionNew">
+								標準TaitraCode管理
+						</a></li>
+						<li><a id="productHelpereditShow" href="productHelpereditShow?actionNew">
+								設定型錄小幫手
+						</a></li>
+						<li><a id="messagelist" href="messagelist?actionNew">
+								訊息管理
+						</a></li>
+						<li><a id="cndataloglist" href="cndataloglist?actionNew">
+								資料異動記錄
+						</a></li>
+						<li><a id="defaultPictureGroupManagementlist" href="defaultPictureGroupManagementlist?actionNew">
+								預設圖管理
+						</a></li>
+						<li><a id="marketRankinglist" href="marketRankinglist?actionNew">
+								市場熱門度資訊設定
+						</a></li>
+						<li><a id="cnEventCsMapeditShow" href="cnEventCsMapeditShow?actionNew">
+								活動快選與產業別設定
+						</a></li>
+				</ul></li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">公司管理</span>
+			</a>
+				<ul class="dropdown-menu">
+						<li><a id="supplierlist" href="供應商管理_查詢條列.html">
+								供應商管理
+						</a></li>
+						<li><a id="buyerlist" href="買家管理_查詢條列.html">
+								買家管理
+						</a></li>
+						<li><a id="companyuserlist" href="公司會員管理_查詢條列.html">
+								公司會員管理
+						</a></li>
+						<li><a id="companyImportlist" href="companyImportlist?actionNew">
+								公司會員匯入
+						</a></li>
+						<li><a id="departmentlist" href="departmentlist?actionNew">
+								部門管理
+						</a></li>
+						<li><a id="companyDomainNameReservelist" href="companyDomainNameReservelist?actionNew">
+								網域保留字管理
+						</a></li>
+						<li><a id="companyUrlApplylist" href="companyUrlApplylist?actionNew">
+								網址異動審核
+						</a></li>
+						<li><a id="companyToExternallist" href="companyToExternallist?actionNew">
+								公司群組管理
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">關懷管理</span>
+			</a>
+				<ul class="dropdown-menu">
+						<li><a id="" href="退信紀錄_查詢條列.html">
+								退信紀錄
+						</a></li>
+						<li><a id="buyerlist" href="退信設定.html">
+								商機卡單設定
+						</a></li>
+						<li><a id="companyuserlist" href="companyuserlist?actionNew">
+								關懷信發送
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">資料集管理</span>
+			</a>
+				<ul class="dropdown-menu" style="display: block;">
+                    <li><a id="announcementlist" href="#">
+                        直播活動管理
+                    </a></li>
+                    <li><a id="announcementlist" href="#">
+                        直播行事曆
+                    </a></li>
+                    <li><a id="announcementlist" href="announcementlist?actionNew">
+								公告管理
+						</a></li>
+						<li><a id="eventlist" href="eventlist?actionNew">
+								活動管理
+						</a></li>
+						<li><a id="articleAdlist" href="articleAdlist?actionNew">
+								廣告管理
+						</a></li>
+						<li><a id="cnAdblocklist" href="cnAdblocklist?actionNew">
+								廣告版位管理
+						</a></li>
+						<li><a id="postAdblocklist" href="postAdblocklist?actionNew">
+								刊登廣告管理
+						</a></li>
+						<li><a id="newslist" href="newslist?actionNew">
+								新聞管理
+						</a></li>
+						<li><a id="specificationCategorylist" href="specificationCategorylist?actionNew">
+								產品規格管理
+						</a></li>
+						<li><a id="articleSystemAdlist" href="articleSystemAdlist?actionNew">
+								系統廣告管理
+						</a></li>
+						<li><a id="articleVideolist" href="articleVideolist?actionNew">
+								影音管理
+						</a></li>
+						<li><a id="articleStaticContentlist" href="articleStaticContentlist?actionNew">
+								靜態資料管理
+						</a></li>
+						<li><a id="resourceGrouplist" href="resourceGrouplist?actionNew">
+								靜態資源管理
+						</a></li>
+						<li><a id="globalPartnerthemeList" href="globalPartnerthemeList?actionNew">
+								合作伙伴管理
+						</a></li>
+						<li><a id="photoManagementlist" href="photoManagementlist?actionNew">
+								圖片庫管理
+						</a></li>
+						<li><a id="articleServiceIntroducelist" href="articleServiceIntroducelist?actionNew">
+								服務說明管理
+						</a></li>
+						<li><a id="relatedLinkslist" href="relatedLinkslist?actionNew">
+								相關連結管理
+						</a></li>
+						<li><a id="generalLinklist" href="generalLinklist?actionNew">
+								泛用資料管理
+						</a></li>
+						<li><a id="cnAnnouncementlist" href="cnAnnouncementlist?actionNew">
+								公告資料集管理
+						</a></li>
+						<li><a id="marqueelist" href="marqueelist?actionNew">
+								跑馬燈資料管理
+						</a></li>
+						<li><a id="taitraLocationlist" href="taitraLocationlist?actionNew">
+								據點資訊管理
+						</a></li>
+						<li><a id="associationlist" href="associationlist?actionNew">
+								策略聯盟管理
+						</a></li>
+						<li><a id="gpalist" href="gpalist?actionNew">
+								各國採購商機管理
+						</a></li>
+						<li><a id="cnCompanyStorylist" href="cnCompanyStorylist?actionNew">
+								廠商故事管理
+						</a></li>
+						<li><a id="cnMenulist" href="cnMenulist?actionNew">
+								選單管理
+						</a></li>
+						<li><a id="customerFeedbackLoglist" href="customerFeedbackLoglist?actionNew">
+								回饋意見與建議管理
+						</a></li>
+						<li><a id="featureSitelist" href="featureSitelist?actionNew">
+								精選專區管理
+						</a></li>
+						<li><a id="nationalMarketlist" href="nationalMarketlist?actionNew">
+								國家市場資訊管理
+						</a></li>
+						<li><a id="publicationlist" href="publicationlist?actionNew">
+								出版品資料集管理
+						</a></li>
+						<li><a id="cnHeaderlist" href="cnHeaderlist?actionNew">
+								Header管理
+						</a></li>
+						<li><a id="footerlist" href="footerlist?actionNew">
+								Footer管理
+						</a></li>
+						<li><a id="cnKnowledgeeditShow" href="cnKnowledgeeditShow?actionNew">
+								知識庫資料集管理
+						</a></li>
+						<li><a id="cnMemberServiceeditShow" href="cnMemberServiceeditShow?actionNew">
+								會員服務資料集管理
+						</a></li>
+						<li><a id="tpmagazineIssuelist" href="tpmagazineIssuelist?actionNew">
+								TP雜誌每期內容管理
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">資料集審核</span>
+			</a>
+				<ul class="dropdown-menu">
+						<li><a id="productVerifylistVerify" href="productVerifylistVerify?actionNew">
+								型錄審核
+						</a></li>
+						<li><a id="newslistVerify" href="newslistVerify?actionNew">
+								新聞審核
+						</a></li>
+						<li><a id="testimonialslistVerify" href="testimonialslistVerify?actionNew">
+								成功案例審核
+						</a></li>
+						<li><a id="topicVerifySettingtopiclist" href="topicVerifySettingtopiclist?actionNew">
+								審核設定
+						</a></li>
+						<li><a id="articleProductBlackCategorySettinglist" href="articleProductBlackCategorySettinglist?actionNew">
+								設定禁用型錄分類名單
+						</a></li>
+						<li><a id="articleProductVerifyReasonSettinglist" href="articleProductVerifyReasonSettinglist?actionNew">
+								設定型錄審核不通過原因
+						</a></li>
+						<li><a id="productUserAttrVerifylist" href="productUserAttrVerifylist?actionNew">
+								自定義屬性審核
+						</a></li>
+						<li><a id="verifyCnCompanyStorylist" href="verifyCnCompanyStorylist?actionNew">
+								廠商故事審核
+						</a></li>
+						<li><a id="verifyMultiArticleAdlist" href="verifyMultiArticleAdlist?actionNew">
+								廣告審核
+						</a></li>
+						<li><a id="verifyCnMemberMessagelist" href="verifyCnMemberMessagelist?actionNew">
+								會員交換訊息審核
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">網站管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="ezPermanentColumneditShow" href="ezPermanentColumneditShow?actionNew">
+								常駐列管理
+						</a></li>
+						<li><a id="domainlist" href="domainlist?actionNew">
+								網別管理
+						</a></li>
+						<li><a id="chdomainlist" href="chdomainlist?actionNew">
+								中文網網別管理
+						</a></li>
+						<li><a id="catalogdefinelist" href="catalogdefinelist?actionNew">
+								自定義Taitra Code
+						</a></li>
+						<li><a id="warningSignslist" href="warningSignslist?actionNew">
+								警語管理
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">後台管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="documentationlist" href="documentationlist?actionNew">
+								文案管理
+						</a></li>
+						<li><a id="mngtopiclist" href="mngtopiclist?actionNew">
+								資料集設計
+						</a></li>
+						<li><a id="layoutArealist" href="layoutArealist?actionNew">
+								底圖管理
+						</a></li>
+						<li><a id="menusysList" href="menusysList?actionNew">
+								系統選單管理
+						</a></li>
+						<li><a id="componentlist" href="componentlist?actionNew">
+								元件管理
+						</a></li>
+						<li><a id="videoTypelist" href="videoTypelist?actionNew">
+								影音類別管理
+						</a></li>
+						<li><a id="pictureTypelist" href="pictureTypelist?actionNew">
+								圖片類型(請勿點擊)
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">郵件管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="multiMailRecordlist" href="multiMailRecordlist?actionNew">
+								郵件範本管理
+						</a></li>
+						<li><a id="marginalslist" href="marginalslist?actionNew">
+								頁首頁尾管理
+						</a></li>
+						<li><a id="contactGrouplist" href="contactGrouplist?actionNew">
+								收件群組管理
+						</a></li>
+						<li><a id="mailExportlist" href="mailExportlist?actionNew">
+								郵件匯出紀錄管理
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">電子報管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="mailOpenRatiolist" href="mailOpenRatiolist?actionNew">
+								電子報開信率查詢
+						</a></li>
+						<li><a id="subscribelist" href="subscribelist?actionNew">
+								中文網訂閱管理
+						</a></li>
+						<li><a id="wwwsubscribelist" href="wwwsubscribelist?actionNew">
+								外語網訂閱管理
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">關鍵字管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="keywordlist" href="keywordlist?actionNew">
+								關鍵字查詢
+						</a></li>
+						<li><a id="keywordblacklist" href="keywordblacklist?actionNew">
+								黑名單查詢
+						</a></li>
+						<li><a id="keywordsynonymlist" href="keywordsynonymlist?actionNew">
+								同義詞管理
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">認證管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="companyCertificationVerifylist" href="companyCertificationVerifylist?actionNew">
+								認證審核
+						</a></li>
+						<li><a id="certificationlist" href="certificationlist?actionNew">
+								認證資料庫管理
+						</a></li>
+						<li><a id="certfocusarealist" href="certfocusarealist?actionNew">
+								重點曝光認證區
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">商機管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="customBusinessTypelist" href="customBusinessTypelist?actionNew">
+								商機自訂分類管理
+						</a></li>
+						<li><a id="businessQualitylist" href="businessQualitylist?actionNew">
+								商機質量表管理
+						</a></li>
+						<li><a id="businessBlacklist" href="businessBlacklist?actionNew">
+								商機黑名單管理
+						</a></li>
+						<li><a id="businessVerifySettinglist" href="businessVerifySettinglist?actionNew">
+								商機審核設定
+						</a></li>
+						<!--li><a id="businessVerifylist" href="businessVerifylist?actionNew">
+								商機審核
+						</a></li>
+						<li><a id="businessMatchKeylist" href="businessMatchKeylist?actionNew">
+								商機配對Key設定
+						</a></li-->
+						<li><a id="businessMatchNewKeylist" href="貼標管理.html">
+								貼標管理
+						</a></li>
+						<li><a id="businessMatchNewKeylist" href="商機配對Key設定.html">
+								商機配對Key設定(New)
+						</a></li>
+						<li><a id="businessVerifysimplyList" href="businessVerifysimplyList?actionNew">
+								商機審核(新)
+						</a></li>
+						<li><a id="businessVerifysimplyNewList" href="businessVerifysimplyNewList?actionNew">
+								商機查詢
+						</a></li>
+						<li><a id="importRfqBusinesslist" href="importRfqBusinesslist?actionNew">
+								商機Trade Inquiry匯入
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">翻譯管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="translationOrderlist" href="translationOrderlist?actionNew">
+								報價管理
+						</a></li>
+						<li><a id="translationRecordlist" href="translationRecordlist?actionNew">
+								記錄查詢
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">SEO管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="seoMetaDataFrontGenerallist" href="seoMetaDataFrontGenerallist?actionNew">
+								前台公版SEO管理
+						</a></li>
+						<li><a id="webCeoenter" href="webCeoenter?actionNew">
+								關鍵字績效管理
+						</a></li>
+						<li><a id="seoMetaDataGenerallist" href="seoMetaDataGenerallist?actionNew">
+								SEO公版管理
+						</a></li>
+						<li><a id="seoMetaDataSpeciallist" href="seoMetaDataSpeciallist?actionNew">
+								SEO客製管理
+						</a></li>
+						<li><a id="seoMetaDataKeywordlist" href="seoMetaDataKeywordlist?actionNew">
+								SEO客製管理(搜尋頁)
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">型錄統計報表管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="authReportC01" href="authReportC01?actionNew">
+								C01 會員類型與產業
+						</a></li>
+						<li><a id="authReportC02" href="authReportC02?actionNew">
+								C02 型錄產業與語系
+						</a></li>
+						<li><a id="authReportC03" href="authReportC03?actionNew">
+								C03 會員型錄
+						</a></li>
+						<li><a id="authReportC04" href="authReportC04?actionNew">
+								C04 型錄明細
+						</a></li>
+						<li><a id="authReportC05" href="authReportC05?actionNew">
+								C05 型錄異動統計
+						</a></li>
+						<li><a id="authReportC08" href="authReportC08?actionNew">
+								C08 近期無型錄異動的會員
+						</a></li>
+						<li><a id="authReportC09" href="authReportC09?actionNew">
+								C09 無上傳型錄EP會員
+						</a></li>
+						<li><a id="authReportC10" href="authReportC10?actionNew">
+								C10 審核不通過型錄的會員
+						</a></li>
+						<li><a id="authReportC11" href="authReportC11?actionNew">
+								C11 型錄認證統計
+						</a></li>
+						<li><a id="authReportC12" href="authReportC12?actionNew">
+								C12 型錄規格統計
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">財務統計報表管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="reportbill51" href="reportbill51?actionNew">
+								會員訂單統計
+						</a></li>
+						<li><a id="reportbill56" href="reportbill56?actionNew">
+								續訂率分析報表
+						</a></li>
+						<li><a id="reportbill61" href="reportbill61?actionNew">
+								客服人員績效統計
+						</a></li>
+						<li><a id="reportbill64" href="reportbill64?actionNew">
+								專輯廣告繳件狀況
+						</a></li>
+						<li><a id="reportbill96" href="reportbill96?actionNew">
+								訂單狀態查詢
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">商機統計報表管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="authReportA01" href="authReportA01?actionNew">
+								A01 會員商機統計
+						</a></li>
+						<li><a id="authReportA03" href="authReportA03?actionNew">
+								A03 會員商機則數統計
+						</a></li>
+						<li><a id="authReportA05" href="authReportA05?actionNew">
+								A05 型錄商機排名統計
+						</a></li>
+						<li><a id="authReportA06" href="authReportA06?actionNew">
+								A06 商機進出貨統計
+						</a></li>
+						<li><a id="authReportA10" href="authReportA10?actionNew">
+								A10 每日商機數量統計
+						</a></li>
+						<li><a id="authReportA11" href="authReportA11?actionNew">
+								A11 買主實體商機統計
+						</a></li>
+						<li><a id="authReportA12" href="authReportA12?actionNew">
+								A12 供應商所收商機統計
+						</a></li>
+						<li><a id="authReportA13" href="authReportA13?actionNew">
+								A13 直接商機配對統計
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">排程和介接管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="schedulelist" href="schedulelist?actionNew">
+								排程功能
+						</a></li>
+						<li><a id="interfactlist" href="interfactlist?actionNew">
+								介接項目
+						</a></li>
+						<li><a id="cncronloglist" href="cncronloglist?actionNew">
+								排程警訊管理
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">影音統計報表管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="videoStatisticslist" href="videoStatisticslist?actionNew">
+								影音統計匯出管理
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">會員統計報表管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="authReportB01" href="authReportB01?actionNew">
+								B01 會員總數分析-預設
+						</a></li>
+						<li><a id="authReportB03" href="authReportB03?actionNew">
+								B03 會員總數分析-進階
+						</a></li>
+						<li><a id="authReportB04" href="authReportB04?actionNew">
+								B04 供應商會員分類
+						</a></li>
+						<li><a id="authReportB06" href="authReportB06?actionNew">
+								B06 停用會員名單
+						</a></li>
+						<li><a id="authReportB08" href="authReportB08?actionNew">
+								B08 會員產業統計
+						</a></li>
+						<li><a id="authReportB09" href="authReportB09?actionNew">
+								B09 新增會員數查詢
+						</a></li>
+						<li><a id="authReportB10" href="authReportB10?actionNew">
+								B10 客服介接報表
+						</a></li>
+						<li><a id="authReportB11" href="authReportB11?actionNew">
+								B11 會員登入
+						</a></li>
+						<li><a id="authReportB13" href="authReportB13?actionNew">
+								B13 會員啟用
+						</a></li>
+						<li><a id="authReportB16" href="authReportB16?actionNew">
+								B16 版型分析
+						</a></li>
+						<li><a id="authReportB17" href="authReportB17?actionNew">
+								B17 各項功能使用情形
+						</a></li>
+						<li><a id="reportmember85" href="reportmember85?actionNew">
+								會員功能使用調查表
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">網站管理報表</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="reportmaintain2" href="reportmaintain2?actionNew">
+								訂閱統計報表
+						</a></li>
+						<li><a id="reportmaintain5" href="reportmaintain5?actionNew">
+								網站流量報表
+						</a></li>
+						<li><a id="reportmaintain6" href="reportmaintain6?actionNew">
+								廣告報表
+						</a></li>
+						<li><a id="reportmaintain8" href="reportmaintain8?actionNew">
+								搜尋關鍵字統計
+						</a></li>
+						<li><a id="reportmaintain90" href="reportmaintain90?actionNew">
+								主機使用數量統計
+						</a></li>
+						<li><a id="reportmaintain91" href="reportmaintain91?actionNew">
+								新聞點閱次數統計報表
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">搜尋引擎管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="idolSortlist" href="idolSortlist?actionNew">
+								排序設定
+						</a></li>
+						<li><a id="idolWeightlist" href="idolWeightlist?actionNew">
+								權重設定
+						</a></li>
+						<li><a id="idolQmslist" href="idolQmslist?actionNew">
+								置頂管理
+						</a></li>
+						<li><a id="idolRecommendSortlist" href="idolRecommendSortlist?actionNew">
+								推薦元件排序設定
+						</a></li>
+						<li><a id="keywordsynonymlist" href="keywordsynonymlist?actionNew">
+								同義詞管理
+						</a></li>
+						<li><a id="hotKeywordinitShow" href="hotKeywordinitShow?actionNew">
+								熱門關鍵字管理
+						</a></li>
+						<li><a id="idolProductQmslist" href="idolProductQmslist?actionNew">
+								產品置頂管理
+						</a></li>
+						<li><a id="skabmlist" href="skabmlist?actionNew">
+								搜尋框關鍵字置頂與黑名單
+						</a></li>
+						<li><a id="skmlist" href="skmlist?actionNew">
+								搜尋框關鍵字管理
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">介接系統報表</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="authReportA1" href="authReportA1?actionNew">
+								介接報表A1
+						</a></li>
+				</ul>
+			</li>
+<!-- have child -->
+			<li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">交易統計報表管理</span></a>
+				<ul class="dropdown-menu">
+						<li><a id="authReportD01" href="authReportD01?actionNew">
+								D01 銷售統計報表
+						</a></li>
+				</ul>
+			</li>
+	
+</ul>
+
+<script type="text/javascript">
+	//從session找要展開的menu
+	var reFreshMenuUrl = 'supplierlist';
+
+	if(reFreshMenuUrl.length){
+		$('#left_menu a#' + reFreshMenuUrl).closest('ul').css(
+				'display', 'block');
+	}
+</script>
+</div>
+
+<div id="content" class="col-xs-12 col-sm-10">
+				<!--Start Breadcrumb-->
+				<div class="row">
+					<div id="breadcrumb" class="col-xs-12">
+						<a href="#" class="show-sidebar">
+						<!--i class="fa fa-bars" style="color: #9B9B9B"></i-->
+						<img src="images/if_menu-alt_134216.png" style="opacity:0.5; width:16px;" />
+						</a>
+						<ol class="breadcrumb pull-left">
+							<li><a href="dashboard">Home</a></li>
+								<li><a style="pointer-events: none; cursor: default;">
+									資料集管理
+								</a></li>
+							<li><a href="supplierlist">
+									直播活動管理
+							</a></li>
+						</ol>
+					</div>
+				</div>
+				<!--End Breadcrumb-->
+				<!-- Start System Message -->
+				
+
+<link rel="stylesheet" href="css/jqgrid.ttcms.css">
+<link rel="stylesheet" type="text/css" href="datetimepicker/jquery.datetimepicker.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+
+<!--script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/supplier/list.js"></script>
+<script src="js/jquery.ui-contextmenu.min.js"></script>
+<script type="text/javascript" src="datetimepicker/build/jquery.datetimepicker.full.min.js"></script>
+<script type="text/javascript" src="js/common/customDatePicker.js"></script-->
+
+<div class="center-block">
+	<div id="queryDiv">
+		<form id="formForFind" method="POST">
+			<table class="table table-bordered table-hover" id="queryTable">
+				<tbody>
+				<tr>
+					<td style="width:10%;">活動名稱</td>
+					<td style="width:40%;">
+						<input type="text" name="companyUserQuery.seq" value="" id="seq" class="form-control groupName form-control valid" aria-invalid="false">
+					</td>
+					<td style="width:10%;">活動狀態</td>
+					<td>
+                        <select name="statusCode1" id="statusCode1" class="form-control valid" aria-invalid="false" style="width:45%; display:inline-block;">
+							<option value="">請選擇</option>
+							<option value="1">公開</option>
+							<option value="2">下架</option>
+							<option value="3">已發布</option>
+						</select>
+						<select name="statusCode2" id="statusCode2" class="form-control valid" aria-invalid="false" style="width:45%; display:inline-block;">
+							<option value="">請選擇</option>
+							<option value="1">報名中</option>
+							<option value="2">報名截止</option>
+						</select>					
+					</td>
+				</tr>
+                <tr>
+					<td>預定直播時間</td>
+					<td>
+						起
+						<input type="datetime-local" id="createStartTime" name="companySupplierQuery.createStartTime" readonly="" class="form-control groupName" style="cursor:pointer; background-color:#FFFFFF; width:150px; display:inline-block;">
+						<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
+						～迄 
+						<input type="datetime-local" id="createEndTime" name="companySupplierQuery.createEndTime" readonly="" class="form-control groupName" style="cursor:pointer; background-color:#FFFFFF; width:150px; display:inline-block;">
+						<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
+					</td>
+					<td>開放報名</td>
+					<td>
+						<label class="containerdemo" style="display:inline-block; margin-right:15px;">全部
+						  <input type="radio" checked="checked" name="radio2">
+						  <span class="checkmarkradio"></span>
+						</label>
+						<label class="containerdemo" style="display:inline-block; margin-right:15px;">是
+						  <input type="radio" name="radio2">
+						  <span class="checkmarkradio"></span>
+						</label>
+						<label class="containerdemo" style="display:inline-block; margin-right:15px;">否
+						  <input type="radio" name="radio2">
+						  <span class="checkmarkradio"></span>
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">
+						<button type="BUTTON" class="btn btn-info" id="findbtn" onclick="gridToFind(null)" null="">查詢</button>
+						<button type="RESET" class="btn btn-danger" onclick="restart('clean')" id="restartbtn" null="">重新查詢</button>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+		</form>
+	</div>
+
+    <div id="" style="display:block; text-align:right;">
+        <button type="button" urlpath="supplierbatchVerify" class="btn btn-info" onclick="javascript:location.href='直播管理_新增.html'">新增活動</button>
+        <!--button type="button" id="custom_companyuserlist.R_791729" class="btn btn-success" onclick="javascript:location.href='公司會員管理_檢視.html'">檢視</button>
+        <button type="button" id="update791729" class="btn btn-primary">修改</button-->
+    </div>
+
+<div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_gridtable" dir="ltr" style="width:100%;font-family:Microsoft JhengHei;">
+<div class="ui-widget-overlay jqgrid-overlay" id="lui_gridtable"></div>
+<div class="loading ui-state-default ui-state-active" id="load_gridtable" style="display: none;">載入中...</div>
+<div class="ui-jqgrid-view" id="gview_gridtable">
+
+<div class="ui-jqgrid-titlebar ui-jqgrid-caption ui-widget-header ui-corner-top ui-helper-clearfix">
+<span class="ui-jqgrid-title">直播活動列表</span>
+</div>
+
+<div class="ui-state-default ui-jqgrid-hdiv" style="width:100%; text-align:center; border:none; margin:0; padding:0;">
+<div class="ui-jqgrid-hbox" style=" margin:0; padding:0;">
+<!--table class="ui-jqgrid-btable" style="width:100%;" role="grid" aria-labelledby="gbox_gridtable" cellspacing="0" cellpadding="0" border="0"-->
+<table class="table table-bordered table-hover ui-jqgrid-btable" id="gridtable" tabindex="0" cellspacing="0" cellpadding="0" border="0" role="grid" aria-multiselectable="true" aria-labelledby="gbox_gridtable" style="width:100%;">
+<thead>
+<tr class="ui-jqgrid-labels" role="rowheader">
+    <th id="gridtable_createTime" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width:5%">
+    <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+    <div id="jqgh_gridtable_createTime" class="ui-jqgrid-sortable">
+    Action
+    </div>
+    </th>
+    <th id="gridtable_createTime" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width:7%;">
+    <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+    <div id="jqgh_gridtable_createTime" class="ui-jqgrid-sortable">
+    活動編號
+    </div>
+    </th>
+    <th id="gridtable_createTime" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr">
+    <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+    <div id="jqgh_gridtable_createTime" class="ui-jqgrid-sortable">
+    活動起迄
+    </div>
+    </th>
+    <th id="gridtable_wrapperSeq" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr">
+    <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+    <div id="jqgh_gridtable_wrapperSeq" class="ui-jqgrid-sortable">
+    活動名稱
+    </div>
+    </th>
+    <th id="gridtable_contactName" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width:7%;">
+    <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+    <div id="jqgh_gridtable_contactName" class="ui-jqgrid-sortable">
+    活動狀態
+    </div>
+    </th>
+    <th id="gridtable_companyType" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width:10%;">
+    <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+    <div id="jqgh_gridtable_companyType" class="ui-jqgrid-sortable">
+    報名狀態
+    </div>
+    </th>
+    <th id="gridtable_companyName" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width:10%;">
+    <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+    <div id="jqgh_gridtable_companyName" class="ui-jqgrid-sortable">
+    建立帳號
+    </div>
+    </th>
+    <th id="gridtable_createTime" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width:10%;">
+    <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+    <div id="jqgh_gridtable_createTime" class="ui-jqgrid-sortable">
+    建立時間
+    </div>
+    </th>
+    <th id="gridtable_createTime" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width:7%;">
+    <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+    <div id="jqgh_gridtable_createTime" class="ui-jqgrid-sortable">
+    複製連結
+    </div>
+    </th>
+    <!--th id="gridtable_createTime" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr">
+    <span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+    <div id="jqgh_gridtable_createTime" class="ui-jqgrid-sortable">
+    模擬登入
+    </div>
+    </th-->
+</tr>
+
+<tr role="row" id="15843" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" style="height:65px;">
+    <td role="gridcell" style="text-align:center;" title="" aria-describedby="" style="width:15%; text-align:center;">
+    <div class="btn-group"><!--button type="button" id="custom_companyuserlist.R_791729" class="btn btn-success" onclick="javascript:location.href='公司會員管理_檢視.html'">檢視</button--><button type="button" id="update791729" class="btn btn-primary" onclick="javascript:location.href='直播管理_編修-挑選廠商.html'">修改</button></div>
+    </td>
+    <td role="gridcell" style="text-align:center;" title="2018-08-10" aria-describedby="gridtable_createTime">15843</td>
+    <td role="gridcell" style="text-align:center;" title="審核通過" aria-describedby="gridtable_verifyStatusName">2022/4/10 10:00 - 2022/4/11 14:00</td>
+    <td role="gridcell" title="" aria-describedby="gridtable_wrapperSeq">(活動標題)Taiwantrade ICT: Taiwantrade ICT Virtual Pavilion online</td>
+    <td role="gridcell" style="text-align:center;" title="福華電子股份有限公司" aria-describedby="gridtable_companyName">公開</td>
+    <td role="gridcell" style="text-align:center;" title="15843" aria-describedby="gridtable_cid">報名中
+    (<span style="font-weight:bold; color:red; margin:0 7px;">0</span>/<span style="font-weight:bold; color:orange; margin:0 7px;">20</span>)</td>
+    <td role="gridcell" style="text-align:center;" title="Exporter,Manufacturer,ODM,OEM" aria-describedby="gridtable_companyType">liucc</td>
+    <td role="gridcell" style="text-align:center;" title="審核通過" aria-describedby="gridtable_verifyStatusName">2022/3/3 17:20:21</td>
+    <td role="gridcell" style="text-align:center;" title="" aria-describedby="gridtable_createTime">
+    <div class="btn-group"><button type="button" id="cp791729" class="btn btn-success" data-clipboard-target="#link791729" data-original-title="" title="">複製</button></div>
+    </td>
+    <!--td role="gridcell" style="text-align:center;" title="2018-08-10" aria-describedby="gridtable_createTime">
+    <div class="btn-group"><button type="button" id="custom_companyuserlist.frontBU_791729" class="btn btn-success">BU</button><button type="button" id="custom_companyuserlist.frontSU_791729" class="btn btn-primary">SU</button></div>
+    </td-->
+</tr>
+<tr role="row" id="15842" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" style="height:65px;">
+    <td role="gridcell" style="text-align:center;" title="" aria-describedby="" style="width:15%; text-align:center;">
+    <div class="btn-group"><!--button type="button" id="custom_companyuserlist.R_791729" class="btn btn-success" onclick="javascript:location.href='公司會員管理_檢視.html'">檢視</button--><button type="button" id="update791729" class="btn btn-primary" onclick="javascript:location.href='直播管理_編修-挑選廠商.html'">修改</button></div>
+    </td>
+    <td role="gridcell" style="text-align:center;" title="2018-08-10" aria-describedby="gridtable_createTime">15842</td>
+    <td role="gridcell" style="text-align:center;" title="審核通過" aria-describedby="gridtable_verifyStatusName">2022/4/1 10:00 - 2022/4/3 16:00</td>
+    <td role="gridcell" title="" aria-describedby="gridtable_wrapperSeq">(活動標題)Taiwantrade ICT: Taiwantrade ICT Virtual Pavilion online</td>
+    <td role="gridcell" style="text-align:center;" title="福華電子股份有限公司" aria-describedby="gridtable_companyName">公開</td>
+    <td role="gridcell" style="text-align:center;" title="15843" aria-describedby="gridtable_cid">報名截止
+    (<span style="font-weight:bold; color:red; margin:0 7px;">10</span>/<span style="font-weight:bold; color:orange; margin:0 7px;">20</span>)</td>
+    <td role="gridcell" style="text-align:center;" title="Exporter,Manufacturer,ODM,OEM" aria-describedby="gridtable_companyType">liucc</td>
+    <td role="gridcell" style="text-align:center;" title="審核通過" aria-describedby="gridtable_verifyStatusName">2022/2/1 09:20:21</td>
+    <td role="gridcell" style="text-align:center;" title="" aria-describedby="gridtable_createTime">
+    <div class="btn-group"><button type="button" id="cp791729" class="btn btn-success" data-clipboard-target="#link791729" data-original-title="" title="">複製</button></div>
+    </td>
+    <!--td role="gridcell" style="text-align:center;" title="2018-08-10" aria-describedby="gridtable_createTime">
+    <div class="btn-group"><button type="button" id="custom_companyuserlist.frontBU_791729" class="btn btn-success">BU</button><button type="button" id="custom_companyuserlist.frontSU_791729" class="btn btn-primary">SU</button></div>
+    </td-->
+</tr>
+<tr role="row" id="15841" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" style="height:65px;">
+    <td role="gridcell" style="text-align:center;" title="" aria-describedby="" style="width:15%; text-align:center;">
+    <div class="btn-group"><button type="button" id="custom_companyuserlist.R_791729" class="btn btn-success" onclick="javascript:location.href='#'">檢視</button><!--button type="button" id="update791729" class="btn btn-primary">修改</button--></div>
+    </td>
+    <td role="gridcell" style="text-align:center;" title="2018-08-10" aria-describedby="gridtable_createTime">15841</td>
+    <td role="gridcell" style="text-align:center;" title="審核通過" aria-describedby="gridtable_verifyStatusName">2022/4/11 10:00 - 2022/4/11 10:30</td>
+    <td role="gridcell" title="" aria-describedby="gridtable_wrapperSeq">(活動標題-單獨一家)Taiwantrade ICT: Taiwantrade ICT Virtual Pavilion online</td>
+    <td role="gridcell" style="text-align:center;" title="福華電子股份有限公司" aria-describedby="gridtable_companyName">已發布</td>
+    <td role="gridcell" style="text-align:center;" title="15843" aria-describedby="gridtable_cid">報名截止
+    (<span style="font-weight:bold; color:red; margin:0 7px;">1</span>/<span style="font-weight:bold; color:orange; margin:0 7px;">1</span>)</td>
+    <td role="gridcell" style="text-align:center;" title="Exporter,Manufacturer,ODM,OEM" aria-describedby="gridtable_companyType">liucc</td>
+    <td role="gridcell" style="text-align:center;" title="審核通過" aria-describedby="gridtable_verifyStatusName">2022/3/30 17:20:21</td>
+    <td role="gridcell" style="text-align:center;" title="" aria-describedby="gridtable_createTime">
+    <div class="btn-group"><button type="button" id="cp791729" class="btn btn-success" data-clipboard-target="#link791729" data-original-title="" title="">複製</button></div>
+    </td>
+    <!--td role="gridcell" style="text-align:center;" title="2018-08-10" aria-describedby="gridtable_createTime">
+    <div class="btn-group"><button type="button" id="custom_companyuserlist.frontBU_791729" class="btn btn-success">BU</button><button type="button" id="custom_companyuserlist.frontSU_791729" class="btn btn-primary">SU</button></div>
+    </td-->
+</tr>
+    
+
+</thead>
+</table>
+
+</div>
+</div>
+<div id="" class="" dir="ltr" style="width:100%; border:none;">
+<div id="pg_gridpager" class="" role="group">
+<table cellspacing="0" cellpadding="0" border="0" role="row" style="width:100%;">
+<tbody>
+<tr>
+<td></td>
+
+<td id="gridpager_center" align="left" style="white-space:pre; border:none;">
+<table cellspacing="0" cellpadding="0" border="0" style="table-layout:auto;">
+<tbody>
+<tr>
+<td id="first_gridpager" class="ui-pg-button ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-first"></span></td>
+<td id="prev_gridpager" class="ui-pg-button ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-prev"></span></td>
+<td class="ui-pg-button ui-state-disabled" style="width:4px;"><span class="ui-separator"></span></td>
+<td dir="ltr"> <input class="ui-pg-input" type="text" size="2" maxlength="7" value="1" role="textbox" style="height:25px;"> 共 <span id="sp_1_gridpager">15,676</span> 頁</td>
+<td class="ui-pg-button ui-state-disabled" style="width:4px;"><span class="ui-separator"></span></td>
+<td id="next_gridpager" class="ui-pg-button ui-corner-all"><span class="ui-icon ui-icon-seek-next"></span></td>
+<td id="last_gridpager" class="ui-pg-button ui-corner-all"><span class="ui-icon ui-icon-seek-end"></span></td>
+<td dir="ltr">
+<select class="ui-pg-selbox" role="listbox">
+<option role="option" value="10" selected="selected">10</option><option role="option" value="20">20</option><option role="option" value="30">30</option></select>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+
+<td id="gridpager_right" align="right"><div dir="ltr" style="text-align:right" class="ui-paging-info">1 - 10 共 156,753 條</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+
+
+<div class="ui-jqgrid-resize-mark" id="rs_mgridtable">&nbsp;
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div>
+<div id="sourcenow-data-group" style="display:none;">
+<div type="text" id="sourcenow-data-tips" data-val="true">
+</div>
+</div>
+</div>
+
+</body>
+</html>
