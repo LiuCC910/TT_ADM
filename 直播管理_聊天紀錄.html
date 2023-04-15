@@ -21,6 +21,12 @@
 <link rel="stylesheet" href="js/bootstrap-plugin/bootstrap-toggle-master/css/bootstrap-toggle.min.css">
 
 <!--Demo UI暫用-->
+<link rel="stylesheet" href="css/jqgrid.ttcms.css">
+<link rel="stylesheet" type="text/css" href="datetimepicker/jquery.datetimepicker.css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/dashboard-legend.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+
 <style type="text/css">
 .fancybox-margin{margin-right:17px;}
 body{font-family:Microsoft JhengHei;}
@@ -91,49 +97,8 @@ input, select {height:35px !important;}
 
 </style>
 
+<link rel="stylesheet" type="text/css" href="css/style_v2.css">
 <link rel="stylesheet" href="css/temp-demo.css">
-
-<!--script type="text/javascript">
-if (typeof String.prototype.startsWith != 'function') {
-	String.prototype.startsWith = function (str){
-		return this.indexOf(str) == 0;
-	};
-}
-
-String.prototype.endsWith = function(suffix) {
-	return this.indexOf(suffix, this.length - suffix.length) !== -1;
-};
-</script>
-<script src="devoopsv2/plugins/jquery/jquery.min.js"></script>
-<script src="devoopsv2/plugins/bootstrap/bootstrap.min.js"></script>
-<script src="devoopsv2/plugins/jquery-ui/jquery-ui.min.js"></script>
-<script src="jqGrid/js/i18n/grid.locale-tw.js"></script>
-<script src="jqGrid/js/jquery.jqGrid.min.js"></script>
-<script src="js/jqGrid-define.js"></script>
-<script src="devoopsv2/js/devoops.js"></script>
-<script src="jquery-validation-1.13.1/dist/jquery.validate.min.js"></script>
-<script src="jquery-validation-1.13.1/dist/localization/messages_zh_TW.js"></script>
-<script src="jquery-validation-1.13.1/dist/additional-methods.min.js"></script>
-<script type="text/javascript" src="js/common/jquery-validation-define.js"></script>
-<script src="js/bootstrap-growl.min.js"></script>
-<script type="text/javascript" src="js/bootstrap-plugin/bootbox.min.js"></script>
-<script type="text/javascript" src="js/bootbox-define.js"></script>
-<script src="js/jquery-plugin.js"></script>
-<script type="text/javascript" src="js/window-define.js"></script>
-<script type="text/javascript" src="js/common/buildUuid.js"></script>
-<script type="text/javascript" src="datetimepicker/build/jquery.datetimepicker.full.min.js"></script>
-<script type="text/javascript" src="js/common/customDatePicker.js"></script>
-<script type="text/javascript" src="js/ttMessage.js"></script>
-<script type="text/javascript">
-	TTMessage.options.messageMap = {"0090":{"code":"0090","content":"刪除時相關語系的資料會一併刪除，是否確定刪除?","type":1066},"0097":{"code":"0097","content":"{0}-限定為會內Email","type":1066},"0010":{"code":"0010","content":"{0}-欄位格式不符","type":1069},"0098":{"code":"0098","content":"{0}-起日必須小於迄日","type":1066},"0095":{"code":"0095","content":"本訂單已處理完成，無法重覆下單","type":1067},"0096":{"code":"0096","content":"{0}-長度限制為{1}字","type":1066},"0093":{"code":"0093","content":"送出成功","type":1066},"0094":{"code":"0094","content":"送出失敗","type":1069},"0091":{"code":"0091","content":"總匯入筆數：{0}筆、成功：{0}筆、失敗：{0}筆","type":1068},"0092":{"code":"0092","content":"外館審核頁面填寫已完成，無法重複填寫","type":1066},"0006":{"code":"0006","content":"刪除失敗","type":1069},"0007":{"code":"0007","content":"匯入成功","type":1066},"0004":{"code":"0004","content":"修改失敗","type":1069},"0125":{"code":"0125","content":"貴公司在「台灣經貿網」可曝光型錄數為 <b>{0}</b> 張，目前已啟用型錄有 <b>{1}</b> 張，還可再啟用 <b>{2}</b> 張做為曝光型錄。","type":1068},"0005":{"code":"0005","content":"刪除成功","type":1066},"0002":{"code":"0002","content":"新增失敗","type":1069},"0123":{"code":"0123","content":"自訂網址名稱不可含特殊符號","type":1069},"0003":{"code":"0003","content":"修改成功","type":1066},"0124":{"code":"0124","content":"貴公司啟用型錄數已達 {0}張上限，是否要成為企業會員，不受啟用張數限制？歡迎洽詢客服專線 0800-506-088","type":1068},"0088":{"code":"0088","content":"是否要繼續編輯{0}？","type":1066},"0121":{"code":"0121","content":"請至少勾選二筆資料","type":1067},"0089":{"code":"0089","content":"檔案過大, 圖檔大小限制: {0}, gif檔大小限制: {0}","type":1069},"0001":{"code":"0001","content":"新增成功","type":1066},"0122":{"code":"0122","content":"超過圖片上傳最大限制 {0} 張","type":1069},"0008":{"code":"0008","content":"匯入失敗","type":1069},"0009":{"code":"0009","content":"{0}-必填欄位未填","type":1067},"0020":{"code":"0020","content":"匯出失敗","type":1066},"0021":{"code":"0021","content":"請至少勾選一筆資料","type":1066},"0017":{"code":"0017","content":"列印成功","type":1066},"0018":{"code":"0018","content":"列印失敗","type":1069},"0015":{"code":"0015","content":"此公司資料已存在","type":1069},"0016":{"code":"0016","content":"查無符合的資料","type":1066},"0013":{"code":"0013","content":"是否確認刪除","type":1067},"0014":{"code":"0014","content":"此登入帳號無效","type":1066},"0099":{"code":"0099","content":"上傳檔案格式不符","type":1069},"0011":{"code":"0011","content":"{0}-資料已存在","type":1069},"0012":{"code":"0012","content":"資料已被使用，不可刪除","type":1069},"0019":{"code":"0019","content":"匯出成功","type":1066},"0031":{"code":"0031","content":"關鍵字-{0}不可使用","type":1066},"0032":{"code":"0032","content":"輸入的型錄名稱:{0}，因營運政策，需待審核人員通過後才可上架","type":1066},"0030":{"code":"0030","content":"勾選資料包含非黑名單資料","type":1066},"0028":{"code":"0028","content":"寄送失敗","type":1066},"0029":{"code":"0029","content":"勾選資料包含黑名單資料","type":1066},"0026":{"code":"0026","content":"資料已送出，待排程作業執行","type":1066},"0027":{"code":"0027","content":"寄送成功","type":1066},"0024":{"code":"0024","content":"審核失敗","type":1066},"0025":{"code":"0025","content":"資料已送出，待人員審核","type":1066},"0022":{"code":"0022","content":"選擇的資料已送過{0}翻譯，是否仍要翻譯?","type":1066},"0023":{"code":"0023","content":"審核成功","type":1066},"0042":{"code":"0042","content":"輸入的{0}-{1}不存在","type":1066},"0043":{"code":"0043","content":"申請送出成功","type":1066},"0040":{"code":"0040","content":"分數加總不可超過{0}分","type":1066},"0041":{"code":"0041","content":"需為數字","type":1069},"0039":{"code":"0039","content":"型錄名稱{0}具黑名單中的關鍵字","type":1066},"0037":{"code":"0037","content":"該型錄為必審型錄","type":1066},"0038":{"code":"0038","content":"關鍵字{0}在黑名單中","type":1066},"0035":{"code":"0035","content":"輸入的產品分類:{0}，因營運政策，需待審核人員通過後才可上架","type":1066},"0036":{"code":"0036","content":"本型錄與其它型錄({0})的欄位資料重覆","type":1066},"0033":{"code":"0033","content":"輸入的產業別:{0}，因營運政策，需待審核人員通過後才可上架","type":1066},"0034":{"code":"0034","content":"輸入的關鍵字:{0}，因營運政策，需待審核人員通過後才可上架","type":1066},"0053":{"code":"0053","content":"{0}資料已變更，請於{0}內點選確認信完成修改","type":1066},"0054":{"code":"0054","content":"是否確認取消","type":1066},"0051":{"code":"0051","content":"超過可設定的上限數量{0}，請重新設定","type":1067},"0052":{"code":"0052","content":"是否確認修改{0}","type":1066},"0050":{"code":"0050","content":"{0}只能申請{0}次","type":1066},"0048":{"code":"0048","content":"是否確認修改，修改後， 原分類下的所有型錄， 全部歸類於Other","type":1066},"0049":{"code":"0049","content":"請先關閉 {0} 或 {0}，再新增{0}","type":1066},"0046":{"code":"0046","content":"是否確認刪除，刪除後，此分類下的所有型錄， 全部歸類於Other","type":1066},"0047":{"code":"0047","content":"是否確認匯入，匯入後， 原分類下的所有型錄， 全部歸類於Other","type":1066},"0044":{"code":"0044","content":"申請送出失敗","type":1069},"0045":{"code":"0045","content":"匯入完畢","type":1066},"0064":{"code":"0064","content":"是否確定搬移？","type":1066},"0065":{"code":"0065","content":"目的端公司屬於eCatalog會員，型錄使用限制為{0}張，","type":1066},"0062":{"code":"0062","content":"{0}和{1}，資料相同","type":1066},"0063":{"code":"0063","content":"{0}輸入錯誤\\n原因:{1}","type":1066},"0060":{"code":"0060","content":"匯入檔案格式不符，請檢查調整後重新匯入","type":1066},"0061":{"code":"0061","content":"是否確認返回?","type":1066},"0059":{"code":"0059","content":"您已完成回娘家 確認Email的動作， 請使用email、密碼登入。","type":1066},"0057":{"code":"0057","content":"您尚未完成email確認，請至email點選確認信完成或點選重新寄送","type":1066},"0058":{"code":"0058","content":"{0}輸入錯誤，請重新輸入","type":1069},"0055":{"code":"0055","content":"取消成功","type":1066},"0056":{"code":"0056","content":"取消失敗","type":1066},"0075":{"code":"0075","content":"提醒您，您即將連結到非台灣經貿網的網站，請小心處理。","type":1066},"0076":{"code":"0076","content":"是否要儲存為自訂範本","type":1066},"0073":{"code":"0073","content":"本日翻譯作業已滿，今日不再提供翻譯","type":1066},"0074":{"code":"0074","content":"供應商將取得您的連絡資訊，包括：email…等","type":1066},"0071":{"code":"0071","content":"付款失敗，請重新挑選付款方式","type":1066},"0072":{"code":"0072","content":"翻譯字數大於可使用字數","type":1069},"0070":{"code":"0070","content":"是否確定刪除目錄及所有子目錄？","type":1066},"0105":{"code":"0105","content":"貴公司目前為台灣經貿網的「{0}」","type":1068},"0106":{"code":"0106","content":"貴公司企業網頁使用到期日:{0}","type":1068},"0103":{"code":"0103","content":"103 尚未完成配對，無配對結果。","type":1068},"0104":{"code":"0104","content":"已被加入黑名單的買主將無法審核通過！","type":1067},"0068":{"code":"0068","content":"執行失敗","type":1066},"0101":{"code":"0101","content":"是否確定要送到採洽易？","type":1068},"0069":{"code":"0069","content":"{0}已被翻譯過，是否要排除？ ","type":1066},"0102":{"code":"0102","content":"配對完畢，無符合的配對資料。","type":1068},"0066":{"code":"0066","content":"統一編號不存在","type":1066},"0067":{"code":"0067","content":"執行成功","type":1066},"0100":{"code":"0100","content":"勾選資料中，已被加入黑名單的買主將無法審核通過！","type":1067},"0109":{"code":"0109","content":"Attachment超過上傳大小","type":1069},"0107":{"code":"0107","content":"貴公司在「台灣經貿網」可建置的型錄張數為{0}張，目前己建置{1}張，您還可以繼續新增{2}張型錄","type":1068},"0108":{"code":"0108","content":"查看服務內容：請點選這裡，會開啟一新視窗，告知您的會員專屬權益。","type":1068},"0086":{"code":"0086","content":"圖檔尺寸有誤，建議圖片寬、高的尺寸至少大於或等於{0}！","type":1066},"0087":{"code":"0087","content":"是否存檔？","type":1066},"0120":{"code":"0120","content":"You can only choose {0} category !","type":1069},"0084":{"code":"0084","content":"部份資料已被使用，不可刪除。","type":1066},"0085":{"code":"0085","content":"尚未選取任何資料！","type":1066},"0082":{"code":"0082","content":"排程已使用此範本，無法停用","type":1066},"0083":{"code":"0083","content":"{0}：一週內的張貼則數({1}則)已達上限，目前不可再張貼！","type":1066},"0080":{"code":"0080","content":" 此為{0}帳號， 請使用{0}的忘記密碼功能","type":1066},"0081":{"code":"0081","content":"查無符合的資料，是否要前往註冊成為{0}?","type":1066},"0116":{"code":"0116","content":"名稱內不可含有 | \\ ＠ 特殊符號","type":1069},"0117":{"code":"0117","content":"權限不足，無法刪除總管理者。","type":1069},"0114":{"code":"0114","content":"請點選 {0}碼產業別!!","type":1069},"0115":{"code":"0115","content":"格式不符","type":1067},"0079":{"code":"0079","content":"此為{0}帳號， 請使用{1}方式登入","type":1066},"0112":{"code":"0112","content":"請輸入查詢關鍵字!!","type":1067},"0113":{"code":"0113","content":"此特殊產業將有警語顯示於網頁下方","type":1067},"0077":{"code":"0077","content":"無使用權限","type":1066},"0110":{"code":"0110","content":"Preferred Meeting Date欄位，起始日大於迄日","type":1069},"0078":{"code":"0078","content":"預設語系：{0} 網的資料未填寫完整，請點此{0}調整內容","type":1066},"0111":{"code":"0111","content":"請點選一個 {0}","type":1067},"0118":{"code":"0118","content":"刪除自己的帳號是不被允許的","type":1069},"0119":{"code":"0119","content":"已選取相同產業別!!","type":1069}};
-</script>
-<script src="js/bootstrap-ttcms.js"></script>
-<script src="js/jquery.countdown.min.js"></script>
-<script src="js/bootstrap-plugin/bootstrap-toggle-master/js/bootstrap-toggle.min.js"></script>
-<script type="text/javascript" src="js/codeMeta-tw.js"></script>
-<script type="text/javascript">
-	var $jqueryDateTimeFormat = "yyyy-MM-dd hh:mm p";
-</script-->
 
 </head>
 
@@ -147,12 +112,6 @@ String.prototype.endsWith = function(suffix) {
   <span id="ui-id-3" class="ui-dialog-title">選擇報名廠商</span>
 </h3>
 
-	<!--center>
-	<form id="rfq_match_mail_form" name="rfq_match_advanced" style="font-size:95%;">
-		<input type="button" onclick="saveSelectedList();" class="btn btn-danger" value="推薦已選擇供應商">&nbsp;&nbsp;
-		<input type="button" onclick="rfqMatchReplay();" class="btn btn-danger" value="無符合供應商通知信">
-	</form>
-	</center-->
 
 	<div class="modal-contentdemo">
     <center>
@@ -764,13 +723,13 @@ function showSlides(n) {
                     <li class="dropdown"><a href="#" class="dropdown-toggle"> <span class="hidden-xs">資料集管理</span>
                     </a>
                         <ul class="dropdown-menu" style="display: block;">
-                                <li><a id="announcementlist" href="直播活動_查詢條列.html">
-                                        直播活動管理
-                                </a></li>
-                                <li><a id="announcementlist" href="直播活動_直播清單.html">
-                                        直播清單管理
-                                </a></li>
-                            <li><a id="announcementlist" href="announcementlist?actionNew">
+                            <li><a id="announcementlist" href="直播活動_查詢條列.html">
+                                直播活動管理
+                        </a></li>
+                        <li><a id="announcementlist" href="直播活動_直播清單.html">
+                                直播清單管理
+                        </a></li>
+                        <li><a id="announcementlist" href="announcementlist?actionNew">
                                         公告管理
                                 </a></li>
                                 <li><a id="eventlist" href="eventlist?actionNew">
@@ -1297,7 +1256,7 @@ function showSlides(n) {
                         </ul>
                     </li>
             
-        </ul>
+    </ul>
         
 <script type="text/javascript">
 	//從session找要展開的menu
@@ -1330,18 +1289,9 @@ function showSlides(n) {
 					</div>
 				</div>
 				<!--End Breadcrumb-->
-				<!-- Start System Message -->
-				
 
-<link rel="stylesheet" href="css/jqgrid.ttcms.css">
-<link rel="stylesheet" type="text/css" href="datetimepicker/jquery.datetimepicker.css">
-<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
 
-<!--script type="text/javascript" src="js/jquery.fancybox.js"></script>
-<script type="text/javascript" src="js/supplier/list.js"></script>
-<script src="js/jquery.ui-contextmenu.min.js"></script>
-<script type="text/javascript" src="datetimepicker/build/jquery.datetimepicker.full.min.js"></script>
-<script type="text/javascript" src="js/common/customDatePicker.js"></script-->
+
 
 <div class="center-block">
 
@@ -1349,377 +1299,151 @@ function showSlides(n) {
 <div class="ui-jqgrid-view" id="gview_gridtable">
 
 <div class="ui-jqgrid-titlebar ui-jqgrid-caption ui-widget-header ui-corner-top ui-helper-clearfix">
-<span class="ui-jqgrid-title">直播活動管理</span>
+<span class="ui-jqgrid-title">直播紀錄</span>
 <button type="BUTTON" class="btn btn-primary" onclick="history.back()" null="" style="float:right; height:30px; padding-top:3px;">返回</button>
 </div>
+<!--i-jqgrid-titlebar結束-->
 
+    <div id="dashboard_links" class="col-xs-12">
+		<ul class="nav nav-pills nav-stacked hanstyle">
+			<li class=""><a href="#" class="tab-link" id="overview">紀錄總覽</a></li>
+			<li class="active"><a href="#" class="tab-link" id="clients">聊天紀錄</a></li>
+		</ul>
+	</div>
+    <!--頁籤-->
 
-<table class="table table-bordered table-hover">
-	  	<colgroup>
-            <col width="200px;">
-            <col width="300px;">
-            <col width="200px;">
-            <col width="300px;">
-	  	</colgroup>
+    <table class="table table-bordered table-hover">
+        <colgroup>
+          <col width="200px;">
+          <col width="300px;">
+          <col width="200px;">
+          <col width="300px;">
+        </colgroup>
+      <thead>
+          <tr class="primary" style="text-align: center">
+              <th colspan="4">直播聊天紀錄</th>
+          </tr>
+      </thead>
+    </table>
+
+    <table class="table table-bordered table-hover ui-jqgrid-btable" id="gridtable" tabindex="0" cellspacing="0" cellpadding="0" border="0" role="grid" aria-multiselectable="true" aria-labelledby="gbox_gridtable" style="width:100%;">
         <thead>
-			<tr class="primary" style="text-align: center">
-				<th colspan="4">活動資料</th>
-			</tr>
-		</thead>
-		<tbody>
-		<tr>
-			<th>活動ID</th>
-			<td>
-				627369
-			</td>
-            <th>建立日期</th>
-            <td>
-                2023-03-30
-            </td>
-		</tr>
-			<tr>
-				<th>活動標題</th>
-				<td colspan="3">
-					<input type="text" name="businessPostVo.businessPost.subject" value="[凌網測試]LiuccTest Hyweb Test, Hair brush, comb" id="businessPostVo_businessPost_subject" class="form-control" style="width:100%;">
-				</td>
-			</tr>
-			<tr>
-				<th>活動內容簡介</th>
-				<td colspan="3">
-					<textarea name="businessPostVo.businessPost.productDescription" cols="" rows="10" class="form-control" id="businessPostVo_businessPost_productDescription" style="width:100%; height:70px;">[凌網測試]LiuccTest Trade Inquiry, hair brush, comb</textarea>
-				</td>
-			</tr>
-			<!--tr>
-				<th>商機關鍵字</th>
-				<td colspan="3">
-					<div class="bs-example">
-						<div class="bootstrap-tagsinput" style="width:100%; height:40px; vertical-align:middle;">
-						<span class="tag label label-info">買主輸入關鍵字二<span data-role="remove">X</span></span>
-						<span class="tag label label-info">買主輸入關鍵字二<span data-role="remove">X</span></span>
-						<span class="tag label label-danger label-important">ADM審核輸入關鍵字<span data-role="remove">X</span></span>
-						<input type="text" placeholder=""></div>
-						<input type="text" value="" data-role="tagsinput" style="display:none;">
-					</div>
-				</td>
-			</tr>
-			<tr class="form-inline">
-				<th>採購金額</th>
-				<td>
-					<input type="text" name="businessPostVo.businessPost.price" value="7000" id="businessPostVo_businessPost_price" class="form-control">
+        <tr class="ui-jqgrid-labels" role="rowheader">
+            <th id="gridtable_createTime" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width:7%;">
+            留言編號
+            </th>
+            <th id="gridtable_createTime" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width:13%;">
+            留言時間
+            </th>
+            <th id="gridtable_wrapperSeq" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr">
+            留言內容
+            </th>
+            <th id="gridtable_companyName" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width:15%;">
+            留言帳號
+            </th>
+        </tr>
+        
+        <tr role="row" id="15843" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" style="height:65px;">
+            <td role="gridcell" style="text-align:center;" title="2018-08-10" aria-describedby="gridtable_createTime">15843</td>
+            <td role="gridcell" style="text-align:center;" title="審核通過" aria-describedby="gridtable_verifyStatusName">2022/3/3 17:20:21</td>
+            <td role="gridcell" title="" aria-describedby="gridtable_wrapperSeq">(活動標題)Taiwantrade ICT: Taiwantrade ICT Virtual Pavilion online</td>
+            <td role="gridcell" style="text-align:center;" title="Exporter,Manufacturer,ODM,OEM" aria-describedby="gridtable_companyType">liucc</td>
+        </tr>
+        <tr role="row" id="15842" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" style="height:65px;">
+            <td role="gridcell" style="text-align:center;" title="2018-08-10" aria-describedby="gridtable_createTime">15842</td>
+            <td role="gridcell" style="text-align:center;" title="審核通過" aria-describedby="gridtable_verifyStatusName">2022/2/1 09:20:21</td>
+            <td role="gridcell" title="" aria-describedby="gridtable_wrapperSeq">(活動標題)Taiwantrade ICT: Taiwantrade ICT Virtual Pavilion online</td>
+            <td role="gridcell" style="text-align:center;" title="Exporter,Manufacturer,ODM,OEM" aria-describedby="gridtable_companyType">liucc@hyweb.com.tw</td>
+        </tr>
+        <tr role="row" id="15841" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" style="height:65px;">
+            <td role="gridcell" style="text-align:center;" title="2018-08-10" aria-describedby="gridtable_createTime">15841</td>
+            <td role="gridcell" style="text-align:center;" title="審核通過" aria-describedby="gridtable_verifyStatusName">2022/3/30 17:20:21</td>
+            <td role="gridcell" title="" aria-describedby="gridtable_wrapperSeq">(活動標題-單獨一家)Taiwantrade ICT: Taiwantrade ICT Virtual Pavilion online</td>
+            <td role="gridcell" style="text-align:center;" title="Exporter,Manufacturer,ODM,OEM" aria-describedby="gridtable_companyType">liucc</td>
+        </tr>
+        <tr role="row" id="15843" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" style="height:65px;">
+            <td role="gridcell" style="text-align:center;" title="2018-08-10" aria-describedby="gridtable_createTime">15843</td>
+            <td role="gridcell" style="text-align:center;" title="審核通過" aria-describedby="gridtable_verifyStatusName">2022/3/3 17:20:21</td>
+            <td role="gridcell" title="" aria-describedby="gridtable_wrapperSeq">(活動標題)Taiwantrade ICT: Taiwantrade ICT Virtual Pavilion online</td>
+            <td role="gridcell" style="text-align:center;" title="Exporter,Manufacturer,ODM,OEM" aria-describedby="gridtable_companyType">liucc</td>
+        </tr>
+        <tr role="row" id="15842" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" style="height:65px;">
+            <td role="gridcell" style="text-align:center;" title="2018-08-10" aria-describedby="gridtable_createTime">15842</td>
+            <td role="gridcell" style="text-align:center;" title="審核通過" aria-describedby="gridtable_verifyStatusName">2022/2/1 09:20:21</td>
+            <td role="gridcell" title="" aria-describedby="gridtable_wrapperSeq">(活動標題)Taiwantrade ICT: Taiwantrade ICT Virtual Pavilion online</td>
+            <td role="gridcell" style="text-align:center;" title="Exporter,Manufacturer,ODM,OEM" aria-describedby="gridtable_companyType">liucc</td>
+        </tr>
+        <tr role="row" id="15841" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" style="height:65px;">
+            <td role="gridcell" style="text-align:center;" title="2018-08-10" aria-describedby="gridtable_createTime">15841</td>
+            <td role="gridcell" style="text-align:center;" title="審核通過" aria-describedby="gridtable_verifyStatusName">2022/3/30 17:20:21</td>
+            <td role="gridcell" title="" aria-describedby="gridtable_wrapperSeq">(活動標題-單獨一家)Taiwantrade ICT: Taiwantrade ICT Virtual Pavilion online</td>
+            <td role="gridcell" style="text-align:center;" title="Exporter,Manufacturer,ODM,OEM" aria-describedby="gridtable_companyType">liucc</td>
+        </tr>
+        <tr role="row" id="15841" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" style="height:65px;">
+            <td role="gridcell" style="text-align:center;" title="2018-08-10" aria-describedby="gridtable_createTime">15841</td>
+            <td role="gridcell" style="text-align:center;" title="審核通過" aria-describedby="gridtable_verifyStatusName">2022/3/30 17:20:21</td>
+            <td role="gridcell" title="" aria-describedby="gridtable_wrapperSeq">(活動標題-單獨一家)Taiwantrade ICT: Taiwantrade ICT Virtual Pavilion online</td>
+            <td role="gridcell" style="text-align:center;" title="Exporter,Manufacturer,ODM,OEM" aria-describedby="gridtable_companyType">liucc</td>
+        </tr>
+        <tr role="row" id="15843" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" style="height:65px;">
+            <td role="gridcell" style="text-align:center;" title="2018-08-10" aria-describedby="gridtable_createTime">15843</td>
+            <td role="gridcell" style="text-align:center;" title="審核通過" aria-describedby="gridtable_verifyStatusName">2022/3/3 17:20:21</td>
+            <td role="gridcell" title="" aria-describedby="gridtable_wrapperSeq">(活動標題)Taiwantrade ICT: Taiwantrade ICT Virtual Pavilion online</td>
+            <td role="gridcell" style="text-align:center;" title="Exporter,Manufacturer,ODM,OEM" aria-describedby="gridtable_companyType">liucc</td>
+        </tr>
+        <tr role="row" id="15842" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" style="height:65px;">
+            <td role="gridcell" style="text-align:center;" title="2018-08-10" aria-describedby="gridtable_createTime">15842</td>
+            <td role="gridcell" style="text-align:center;" title="審核通過" aria-describedby="gridtable_verifyStatusName">2022/2/1 09:20:21</td>
+            <td role="gridcell" title="" aria-describedby="gridtable_wrapperSeq">(活動標題)Taiwantrade ICT: Taiwantrade ICT Virtual Pavilion online</td>
+            <td role="gridcell" style="text-align:center;" title="Exporter,Manufacturer,ODM,OEM" aria-describedby="gridtable_companyType">liucc</td>
+        </tr>
+        <tr role="row" id="15841" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" style="height:65px;">
+            <td role="gridcell" style="text-align:center;" title="2018-08-10" aria-describedby="gridtable_createTime">15841</td>
+            <td role="gridcell" style="text-align:center;" title="審核通過" aria-describedby="gridtable_verifyStatusName">2022/3/30 17:20:21</td>
+            <td role="gridcell" title="" aria-describedby="gridtable_wrapperSeq">(活動標題-單獨一家)Taiwantrade ICT: Taiwantrade ICT Virtual Pavilion online</td>
+            <td role="gridcell" style="text-align:center;" title="Exporter,Manufacturer,ODM,OEM" aria-describedby="gridtable_companyType">liucc</td>
+        </tr>
+           
+        
+        </thead>
+    </table>
 
-				</td>
-				<th>採購數量</th>
-				<td>
-					<input type="text" name="businessPostVo.businessPost.quantity" value="1000" id="businessPostVo_businessPost_quantity" class="form-control" style="width: 100px;">
-					<select name="businessPostVo.businessPost.quantityUnit" id="businessPostVo_businessPost_quantityUnit" class="form-control">
-						<option value="1575" selected="selected">Pieces</option>
-						<option value="1576">20' Container</option>
-						<option value="1943">40' Container</option>
-						<option value="1944">40' HQ Container</option>
-						<option value="1949">Acre/Acres</option>
-						<option value="1950">Ampere/Amperes</option>
-						<option value="1951">Bags</option>
-						<option value="1952">Barrel/Barrels</option>
-						<option value="1953">Boxes</option>
-						<option value="1954">Bushel/Bushels</option>
-						<option value="1955">Carat/Carats</option>
-						<option value="1956">Carton/Cartons</option>
-						<option value="1957">Case/Cases</option>
-						<option value="1958">Centimeter/Centimeters</option>
-						<option value="1959">Chain/Chains</option>
-						<option value="1960">Cubic Centimeter/Cubic Centimeters</option>
-						<option value="1961">Cubic Foot/Cubic Feet</option>
-						<option value="1962">Cubic Inch/Cubic Inches</option>
-						<option value="1963">Cubic Meter/Cubic Meters</option>
-						<option value="1964">Cubic Yard/Cubic Yards</option>
-						<option value="1965">Degrees Celsius</option>
-						<option value="1966">Degrees Fahrenheit</option>
-						<option value="1967">Dozen/Dozens</option>
-						<option value="1968">Dram/Drams</option>
-						<option value="1969">Fluid Ounce/Fluid Ounces</option>
-						<option value="1970">Foot</option>
-						<option value="1971">Furlong/Furlongs</option>
-						<option value="1972">Gallon/Gallons</option>
-						<option value="1973">Gill/Gills</option>
-						<option value="1974">Grain/Grains</option>
-						<option value="1975">Gram/Grams</option>
-						<option value="1976">Gross</option>
-						<option value="1977">Hectare/Hectares</option>
-						<option value="1978">Hertz</option>
-						<option value="1979">Inch/Inches</option>
-						<option value="1980">Kiloampere/Kiloamperes</option>
-						<option value="1981">Kilogram/Kilograms</option>
-						<option value="1982">Kilohertz</option>
-						<option value="1983">Kilometer/Kilometers</option>
-						<option value="1984">Kiloohm/Kiloohms</option>
-						<option value="1985">Kilovolt/Kilovolts</option>
-						<option value="1986">Kilowatt/Kilowatts</option>
-						<option value="1987">Liter/Liters</option>
-						<option value="1988">Long Ton/Long Tons</option>
-						<option value="1989">Megahertz</option>
-						<option value="1990">Meter</option>
-						<option value="1991">Metric Ton/Metric Tons</option>
-						<option value="1992">Mile/Miles</option>
-						<option value="1993">Milliampere/Milliamperes</option>
-						<option value="1994">Milligram/Milligrams</option>
-						<option value="1995">Millihertz</option>
-						<option value="1996">Milliliter/Milliliters</option>
-						<option value="1997">Millimeter/Millimeters</option>
-						<option value="1998">Milliohm/Milliohms</option>
-						<option value="1999">Millivolt/Millivolts</option>
-						<option value="2000">Milliwatt/Milliwatts</option>
-						<option value="2001">Nautical Mile/Nautical Miles</option>
-						<option value="2002">Ohm/Ohms</option>
-						<option value="2004">Pack/Packs</option>
-						<option value="2005">Pairs</option>
-						<option value="2006">Pallet/Pallets</option>
-						<option value="2008">Perch/Perches</option>
-						<option value="2009">Pint/Pints</option>
-						<option value="2010">Plant/Plants</option>
-						<option value="2012">Pound/Pounds</option>
-						<option value="2013">Quart/Quarts</option>
-						<option value="2014">Quarter/Quarters</option>
-						<option value="2016">Rod/Rods</option>
-						<option value="2017">Rolls</option>
-						<option value="2019">Sheet/Sheets</option>
-						<option value="2020">Short Ton/Short Tons</option>
-						<option value="2022">Square Feet</option>
-						<option value="2023">Square Inch/Square Inches</option>
-						<option value="2024">Square Meters</option>
-						<option value="2025">Square Mile/Square Miles</option>
-						<option value="2026">Square Yard/Square Yards</option>
-						<option value="2028">Strand/Strands</option>
-						<option value="2029">Tonne/Tonnes</option>
-						<option value="2030">Tons</option>
-						<option value="2032">Unit/Units</option>
-						<option value="2033">Volt/Volts</option>
-						<option value="2035">Wp</option>
-						<option value="2036">Yard/Yards</option>
-						<option value="2003">Ounce/Ounces</option>
-						<option value="2007">Parcel/Parcels</option>
-						<option value="2011">Pole/Poles</option>
-						<option value="2015">Reams</option>
-						<option value="2018">Sets</option>
-						<option value="2021">Square Centimeter/Square Centimeters</option>
-						<option value="2027">Stone/Stones</option>
-						<option value="2031">Tray/Trays</option>
-						<option value="2034">Watt/Watts</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<th>張貼日期</th>
-				<td>
-					2018-07-31
-				</td>
-				<th>有效日期<br>(一次最多刊登3個月)</th>
-				<td>
-					<input type="hidden" name="limit_validDate" value="true" id="limit_validDate">
-					<input type="text" class="form-control" id="businessPostVo.businessPost.validDate" name="businessPostVo.businessPost.validDate" value="2018-08-08" readonly="" style="cursor: pointer; background-color: rgb(255, 255, 255);">
-					<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
-				</td>
-			</tr-->
-			<tr>
-				<th>活動預定直播日期區間(起迄)</th>
-				<td colspan="3">
-					<div>
-                        <label>
-                        起 
-                        <input type="datetime-local" id="StartTime" name="" value="2023-04-01 10:00" class="form-control groupName" style="background-color:#FFFFFF; width:250px !important;">
-                        <a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
-                        </label>
-                        ～迄 
-                        <input type="datetime-local" id="EndTime" name="" value="2023-04-03 16:00"  class="form-control groupName" style="background-color:#FFFFFF; width:250px !important;">
-                        <a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
-                  </div>
-				</td>
-			</tr>
-            <tr>
-                <th><label class="required">設定產業別</label></th>
-                <td colspan="3">
-              <div style="display:inline-block; font-size:105%; width:97%;">
-                      <select name="toList" size="15" id="toList" class="form-control" style="width:50%; height:85px !important;" multiple="multiple">
-                          <option value="1234">Medical & Health</option>
-                          <option value="5678">Beauty & Personal Care</option>
-                      </select>
-                      <input type="hidden" id="__multiselect_toList" name="__multiselect_toList" value="">
-                      <button class="btn btn-success" type="button" data-toggle="modal" data-target="#originalModal">選取</button>
-                      <button type="button" class="btn btn-info" onclick="removeOption('toList')">移除</button>
-                  </div>
-              </td>
-            </tr>
-            <tr>
-                <th><label class="required">開放報名</label></th>
-                <td>
-                    <label class="containerdemo" style="display:inline-block; margin-right:15px; width:150px;">是
-                      <input type="radio" checked="checked" name="radio">
-                      <span class="checkmarkradio"></span>
-                    </label>
-                    <label class="containerdemo" style="display:inline-block; margin-right:15px; width:150px;">否
-                      <input type="radio" name="radio">
-                      <span class="checkmarkradio"></span>
-                    </label>
-                </td>
-				<th>報名可選產品數</th>
-				<td>
-					<input type="number" max="10" name="businessPostVo.businessPost.subject" value="0" id="businessPostVo_businessPost_subject" class="form-control" style="width:100%;">
-				</td>
-            </tr>
-			<tr>
-				<th>開放報名日期區間(起迄)</th>
-				<td colspan="3">
-					<div>
-                        <label>
-                        起 
-                        <input type="date" id="StartTime" name="" value="2023-02-20" class="form-control groupName" style="background-color:#FFFFFF; width:250px !important;">
-                        <a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
-                        </label>
-                        ～迄 
-                        <input type="date" id="EndTime" value="2023-03-20" name="" class="form-control groupName" style="background-color:#FFFFFF; width:250px !important;">
-                        <a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
-                  </div>
-				</td>
-			</tr>
-			<tr>
-				<th>活動注意事項</th>
-				<td colspan="3">
-					<textarea name="businessPostVo.businessPost.productDescription" cols="" rows="10" class="form-control" id="businessPostVo_businessPost_productDescription" style="width:100%; height:70px;">直播活動報名注意事項：
-1. 每場直播活動皆有廠商數限制，報名成功非代表取得直播權，報名後需經過審核，審核完成會發送通知信與直播試播網址。
-2. 每場直播活動皆有廠商產業別限制，非該產業別廠商無法報名。
-3. 每場活動一廠商限制報名一次，請不要重複報名。
-4. 符合資格有意願報名廠商，請先準備好直播所需資訊。登入供應商會員，點選想要報名的時段，依序輸入直播資訊，包括：直播名稱、封面圖(建議尺寸為1920&1080)、直播簡介，直播中可推薦商品(最多10筆)。</textarea>
-				</td>
-			</tr>
-			</tbody>
-		<thead>
-			<tr class="primary" style="text-align: center">
-				<th colspan="4">活動直播時段設定</th>
-			</tr>
-		</thead>
-        <tbody>
-            <tr>
-                <th style="width:15%;">場次時段設定</th>
-                <td colspan="3">
-                <ol>
-                <li><p>直播ID：12345</p>
-                    <span style="margin-right:20px;"> 
-                    <input type="datetime-local" id="StartTime" name="" value="2023-04-01 10:00" class="form-control groupName" style="background-color:#FFFFFF; width:250px !important;">
-                    <a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
-                    ～ 
-                    <input type="datetime-local" id="EndTime" value="2023-04-01 10:25" name="" class="form-control groupName" style="background-color:#FFFFFF; width:250px !important;">
-                    <a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a> </span>
-                    <div style="margin-top: 10px;">
-                        <input type="text" name="businessPostVo.businessPost.subject" value="16541333 - 凌網科技股份有限公司" id="businessPostVo_businessPost_subject" class="form-control" style="width:50%;">
-                        <button type="BUTTON" class="btn btn-info" onclick="openModal();">選擇廠商</button>
-                        <button type="button" class="btn btn-primary" onclick="openModal2();">編修資料</button>
-                    </div>
-                    <div>
-                        <label class="containerdemo" style="display:inline-block; margin-right:15px; width:100px;">現場直播
-                            <input type="radio" checked="checked" name="radio2">
-                            <span class="checkmarkradio"></span>
-                          </label>
-                          <label class="containerdemo" style="display:inline-block; margin-right:15px; width:100px;">錄影首播
-                            <input type="radio" name="radio2">
-                            <span class="checkmarkradio"></span>
-                        </label>
-                    </div>
-            </li>
-                <li><p>直播ID：12345</p>
-                    <span style="margin-right:20px;"> 
-                    <input type="datetime-local" id="StartTime" name="" value="2023-04-01 10:30" class="form-control groupName" style="background-color:#FFFFFF; width:250px !important;">
-                    <a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
-                    ～ 
-                    <input type="datetime-local" id="EndTime" value="2023-04-01 10:55" name="" class="form-control groupName" style="background-color:#FFFFFF; width:250px !important;">
-                    <a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a> </span>
-                    <div style="margin-top: 10px;">
-                        <input type="text" name="businessPostVo.businessPost.subject" value="16541333 - 凌網科技股份有限公司" id="businessPostVo_businessPost_subject" class="form-control" style="width:50%;">
-                        <button type="BUTTON" class="btn btn-info" onclick="openModal();">選擇廠商</button>
-                        <button type="button" class="btn btn-primary" onclick="openModal2();">編修資料</button>
-                    </div>
-                    <div>
-                        <label class="containerdemo" style="display:inline-block; margin-right:15px; width:100px;">現場直播
-                            <input type="radio" name="radio2">
-                            <span class="checkmarkradio"></span>
-                          </label>
-                          <label class="containerdemo" style="display:inline-block; margin-right:15px; width:100px;">錄影首播
-                            <input type="radio" checked="checked" name="radio2">
-                            <span class="checkmarkradio"></span>
-                        </label>
-                    </div>
-                </li>
-                </ol>
-                <button type="button" urlpath="supplierbatchVerify" class="btn btn-info" onclick="javascript:location.href='#'">新增時段</button>
-              <p>*請注意，每一時段間建議間隔五分鐘以上做為轉場緩衝期。</p>
-              </td>
-            </tr>
-        </tbody>
-		<thead>
-			<tr class="primary" style="text-align: center">
-				<th colspan="4">活動狀態</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th>活動狀態</th>
-				<td colspan="3">
-					<label class="containerdemo" style="display:inline-block;">公開
-					  <input type="radio" name="radio3" checked="checked">
-					  <span class="checkmarkradio"></span>
-					</label>
-					<label class="containerdemo" style="display:inline-block;">下架
-					  <input type="radio" name="radio3">
-					  <span class="checkmarkradio"></span>
-					</label>
-				</td>
-			</tr>
-			<tr>
-				<th>建立日期</th>
-				<td>2023/2/1 09:20:21</td>
-				<th>建立人員</th>
-				<td>liucc</td>
-			</tr>
-			<tr>
-				<th>最後編修日期</th>
-				<td>2023/3/31 14:00:34</td>
-				<th>最後編修人員</th>
-				<td>liucc</td>
-			</tr>
-			</tbody>
-			<thead>
-				<tr class="primary" style="text-align: center">
-					<th colspan="4">編修儲存</th>
-				</tr>
-			</thead>
+        <div id="pg_gridpager" class="" role="group">
+            <table cellspacing="0" cellpadding="0" border="0" role="row" style="width:100%;">
             <tbody>
-                <tr>
-                    <td colspan="4">
-		<div style="text-align: center">
-	  	<button type="button" class="btn btn-danger">發布</button>
-	  	<button type="BUTTON" class="btn btn-success" onclick="save()" null="">儲存</button>
-		<button type="BUTTON" class="btn btn-warning" onclick="location.reload();">重設</button>
-		</div>
-		<!--div style="text-align: center;" id="rfq_button1">
-			<button type="BUTTON" class="btn btn-info" onclick="openModal();currentSlide(1)">人工配對</button>
-			<button type="BUTTON" class="btn btn-info" onclick="setSystemMatch()">系統配對</button>
-			<button type="BUTTON" class="btn btn-info" onclick="setWithoutMatch()">結案(無名單)</button>
-		</div-->
-
-                    </td>
-                </tr>
+            <tr>
+            <td></td>
+            
+            <td id="gridpager_center" align="left" style="white-space:pre; border:none;">
+            <table cellspacing="0" cellpadding="0" border="0" style="table-layout:auto;">
+            <tbody>
+            <tr>
+            <td id="first_gridpager" class="ui-pg-button ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-first"></span></td>
+            <td id="prev_gridpager" class="ui-pg-button ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-prev"></span></td>
+            <td class="ui-pg-button ui-state-disabled" style="width:4px;"><span class="ui-separator"></span></td>
+            <td dir="ltr"> <input class="ui-pg-input" type="text" size="2" maxlength="7" value="1" role="textbox" style="height:25px;"> 共 <span id="sp_1_gridpager">8</span> 頁</td>
+            <td class="ui-pg-button ui-state-disabled" style="width:4px;"><span class="ui-separator"></span></td>
+            <td id="next_gridpager" class="ui-pg-button ui-corner-all"><span class="ui-icon ui-icon-seek-next"></span></td>
+            <td id="last_gridpager" class="ui-pg-button ui-corner-all"><span class="ui-icon ui-icon-seek-end"></span></td>
+            <td dir="ltr">
+            <select class="ui-pg-selbox" role="listbox">
+            <option role="option" value="10" selected="selected">10</option><option role="option" value="20">20</option><option role="option" value="30">30</option></select>
+            </td>
+            </tr>
             </tbody>
-</table>
+            </table>
+            </td>
+            
+            <td id="gridpager_right" align="right"><div dir="ltr" style="text-align:right" class="ui-paging-info">1 - 10 共 78 條</div></td>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+            
 
 
-		<!--div style="text-align: center">
-		<button type="button" onclick="directMatchShow()" class="btn btn-primary">人工配對</button>
-	  	<button type="button" onclick="matchResultShow()" class="btn btn-danger">配對結果</button>
-	  	<button type="BUTTON" class="btn btn-success" onclick="save()" null="">儲存</button>
-		<button type="BUTTON" class="btn btn-warning" onclick="location.reload();">重填</button>
-	  	<button type="button" onclick="setDirectFailMatchClose()" class="btn btn-primary">結案(無名單)</button>
-		</div-->
-
-		</div>
-
+</div>
+<!--ui-jqgrid-view結束-->
 
 
 <div class="ui-jqgrid-resize-mark" id="rs_mgridtable">&nbsp;
@@ -1731,16 +1455,15 @@ function showSlides(n) {
 </div>
 
 </div>
+<!--content結束-->
 
 </div>
-</div>
+<!--row結束-->
 
-<div>
-<div id="sourcenow-data-group" style="display:none;">
-<div type="text" id="sourcenow-data-tips" data-val="true">
 </div>
-</div>
-</div>
+<!--main結束-->
+
+
 
 </body>
 </html>
