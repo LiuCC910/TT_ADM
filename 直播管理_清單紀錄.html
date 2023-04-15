@@ -1306,8 +1306,8 @@ function showSlides(n) {
 
     <div id="dashboard_links" class="col-xs-12">
 		<ul class="nav nav-pills nav-stacked hanstyle">
-			<li class="active"><a href="#" class="tab-link" id="overview">紀錄總覽</a></li>
-			<li class=""><a href="#" class="tab-link" id="clients">聊天紀錄</a></li>
+			<li class="active"><a href="直播管理_清單紀錄.html" class="tab-link" id="overview">紀錄總覽</a></li>
+			<li class=""><a href="直播管理_聊天紀錄.html" class="tab-link" id="clients">聊天紀錄</a></li>
 		</ul>
 	</div>
     <!--頁籤-->
@@ -1437,6 +1437,7 @@ function showSlides(n) {
                                                         <th>國家</th>
                                                         <th>本次留言數</th>
                                                         <th>加入日期</th>
+                                                        <th style="width:35%;"></th>
                                                 </tr>
                                         </thead>
                                         <tbody id="tab6MemberProductNum">
@@ -1447,6 +1448,15 @@ function showSlides(n) {
                                                 <td>日本</td>
                                                 <td>4</td>
                                                 <td>2019-01-01</td>
+                                                <td rowspan="6">
+                                                        <div class="_content">
+                                                        <!-- 圓餅圖 -->
+                                                        <figure class="highcharts-figure">
+                                                                <div id="pie1"></div>
+                                                        </figure>
+                                                        </div>
+
+                                                </td>
                                                 </tr>
                                                 <tr>
                                                         <td>liucc910@gmail.com</td>
@@ -1455,16 +1465,40 @@ function showSlides(n) {
                                                         <td>日本</td>
                                                         <td>4</td>
                                                         <td>2019-01-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                                <td>liucc910@gmail.com</td>
-                                                                <td>Liu Chia Chi</td>
-                                                                <td>HYWEB TECHNOLOGY CO., LTD.</td>
-                                                                <td>日本</td>
-                                                                <td>4</td>
-                                                                <td>2019-01-01</td>
-                                                        </tr>
-                                </tbody>
+                                                </tr>
+                                                <tr>
+                                                        <td>liucc910@gmail.com</td>
+                                                        <td>Liu Chia Chi</td>
+                                                        <td>HYWEB TECHNOLOGY CO., LTD.</td>
+                                                        <td>日本</td>
+                                                        <td>4</td>
+                                                        <td>2019-01-01</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>liucc910@gmail.com</td>
+                                                        <td>Liu Chia Chi</td>
+                                                        <td>HYWEB TECHNOLOGY CO., LTD.</td>
+                                                        <td>日本</td>
+                                                        <td>4</td>
+                                                        <td>2019-01-01</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>liucc910@gmail.com</td>
+                                                        <td>Liu Chia Chi</td>
+                                                        <td>HYWEB TECHNOLOGY CO., LTD.</td>
+                                                        <td>日本</td>
+                                                        <td>4</td>
+                                                        <td>2019-01-01</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>liucc910@gmail.com</td>
+                                                        <td>Liu Chia Chi</td>
+                                                        <td>HYWEB TECHNOLOGY CO., LTD.</td>
+                                                        <td>日本</td>
+                                                        <td>4</td>
+                                                        <td>2019-01-01</td>
+                                                </tr>
+                                        </tbody>
                                 </table>	
                         </div>
                 </td>
@@ -1679,24 +1713,24 @@ function showSlides(n) {
                 name: 'Brands',
                 colorByPoint: true,
                 data: [{
-                    name: 'Chrome',
+                    name: '日本',
                     y: 61.41,
                     sliced: true,
                     selected: true
                 }, {
-                    name: 'Internet Explorer',
+                    name: '台灣',
                     y: 11.84
                 }, {
-                    name: 'Firefox',
+                    name: '美國',
                     y: 10.85
                 }, {
-                    name: 'Edge',
+                    name: '韓國',
                     y: 4.67
                 }, {
-                    name: 'Safari',
+                    name: '中國',
                     y: 4.18
                 }, {
-                    name: 'Other',
+                    name: '其他',
                     y: 7.05
                 }]
             }]
