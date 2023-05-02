@@ -919,7 +919,48 @@ String.prototype.endsWith = function(suffix) {
 					<td style="width:40%;">
 						<input type="text" name="companyUserQuery.seq" value="" id="seq" class="form-control groupName form-control valid" aria-invalid="false">
 					</td>
-					<td style="width:10%;">活動狀態</td>
+					<td style="width:10%;">活動ID</td>
+					<td style="width:40%;">
+						<input type="text" name="companyUserQuery.seq" value="" id="seq" class="form-control groupName form-control valid" aria-invalid="false">
+					</td>
+				</tr>
+                <tr>
+					<td>活動開始日期區間</td>
+					<td>
+						
+						<input type="date" id="createStartTime" name="companySupplierQuery.createStartTime" readonly="" class="form-control groupName" style="cursor:pointer; background-color:#FFFFFF; width:150px; display:inline-block;">
+						<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
+						～ 
+						<input type="date" id="createEndTime" name="companySupplierQuery.createEndTime" readonly="" class="form-control groupName" style="cursor:pointer; background-color:#FFFFFF; width:150px; display:inline-block;">
+						<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
+					</td>
+					<td>活動結束日期區間</td>
+					<td>
+						
+						<input type="date" id="createStartTime" name="companySupplierQuery.createStartTime" readonly="" class="form-control groupName" style="cursor:pointer; background-color:#FFFFFF; width:150px; display:inline-block;">
+						<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
+						～ 
+						<input type="date" id="createEndTime" name="companySupplierQuery.createEndTime" readonly="" class="form-control groupName" style="cursor:pointer; background-color:#FFFFFF; width:150px; display:inline-block;">
+						<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
+					</td>
+				</tr>
+                <tr>
+					<td>建立帳號(email)</td>
+					<td>
+						<input type="text" name="companyUserQuery.seq" value="" id="seq" class="form-control groupName form-control valid" aria-invalid="false">
+					</td>
+					<td>建立日期區間</td>
+					<td>
+						
+						<input type="date" id="createStartTime" name="companySupplierQuery.createStartTime" readonly="" class="form-control groupName" style="cursor:pointer; background-color:#FFFFFF; width:150px; display:inline-block;">
+						<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
+						～ 
+						<input type="date" id="createEndTime" name="companySupplierQuery.createEndTime" readonly="" class="form-control groupName" style="cursor:pointer; background-color:#FFFFFF; width:150px; display:inline-block;">
+						<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
+					</td>
+				</tr>
+				<tr>
+					<td>活動狀態</td>
 					<td>
                         <select name="statusCode1" id="statusCode1" class="form-control valid" aria-invalid="false" style="width:45%; display:inline-block;">
 							<option value="">請選擇</option>
@@ -932,17 +973,6 @@ String.prototype.endsWith = function(suffix) {
 							<option value="1">報名中</option>
 							<option value="2">報名截止</option>
 						</select>					
-					</td>
-				</tr>
-                <tr>
-					<td>預定直播時間</td>
-					<td>
-						起
-						<input type="datetime-local" id="createStartTime" name="companySupplierQuery.createStartTime" readonly="" class="form-control groupName" style="cursor:pointer; background-color:#FFFFFF; width:150px; display:inline-block;">
-						<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
-						～迄 
-						<input type="datetime-local" id="createEndTime" name="companySupplierQuery.createEndTime" readonly="" class="form-control groupName" style="cursor:pointer; background-color:#FFFFFF; width:150px; display:inline-block;">
-						<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
 					</td>
 					<td>開放報名</td>
 					<td>

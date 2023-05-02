@@ -427,14 +427,16 @@ String.prototype.endsWith = function(suffix) {
                       <div style="margin-top: 10px;">
                         <input type="text" name="businessPostVo.businessPost.subject" value="1158853" id="businessPostVo_businessPost_subject" class="form-control" style="width:10%;display:inline;">
                         <button type="BUTTON" class="btn btn-info">取得產品資訊</button>
-                        <input type="text" name="businessPostVo.businessPost.subject" value="1158853 ebook-hyread" id="businessPostVo_businessPost_subject" class="form-control" style="width:50%;" disabled>
+                        <input type="text" name="businessPostVo.businessPost.subject" value="1158853 ebook-hyread" id="businessPostVo_businessPost_subject" class="form-control" style="width:50%;display:inline-block;" disabled>
+                        <button type="button" class="btn btn-warning" onclick="removeOption('toList')">移除</button>
                       </div>
                   </li>
                   <li>
                       <div style="margin-top: 10px;">
                         <input type="text" name="businessPostVo.businessPost.subject" value="輸入產品ID" id="businessPostVo_businessPost_subject" class="form-control" style="width:10%;display:inline;">
                         <button type="BUTTON" class="btn btn-info">取得產品資訊</button>
-                        <input type="text" name="businessPostVo.businessPost.subject" value="" id="businessPostVo_businessPost_subject" class="form-control" style="width:50%;" disabled>
+                        <input type="text" name="businessPostVo.businessPost.subject" value="" id="businessPostVo_businessPost_subject" class="form-control" style="width:50%;display:inline-block;" disabled>
+                        <button type="button" class="btn btn-warning" onclick="removeOption('toList')">移除</button>
                       </div>
                   </li>
                   </ol>
@@ -445,7 +447,7 @@ String.prototype.endsWith = function(suffix) {
         </table>
 
         <div style="text-align:center;margin-top:50px;">
-            <button type="button" class="btn btn-danger">確定選入</button>
+            <button type="button" class="btn btn-danger">儲存變更</button>
             <button type="button" class="btn">取消</button>
         </div>
       </div>
@@ -1601,7 +1603,8 @@ function showSlides(n) {
                 <th style="width:15%;">場次時段設定</th>
                 <td colspan="3">
                 <ol>
-                <li><p>直播ID：12345</p>
+                <li><button type="button" class="btn btn-warning" onclick="removeOption('toList')" style="float:right;">移除時段設定</button>
+                    <p>直播ID：12345</p>
                     <span style="margin-right:20px;"> 
                     <input type="datetime-local" id="StartTime" name="" value="2023-04-01 10:00" class="form-control groupName" style="background-color:#FFFFFF; width:250px !important;">
                     <a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
@@ -1624,7 +1627,8 @@ function showSlides(n) {
                         </label>
                     </div>
             </li>
-                <li><p>直播ID：12345</p>
+                <li><button type="button" class="btn btn-warning" onclick="removeOption('toList')" style="float:right;">移除時段設定</button>
+                        <p>直播ID：12345</p>
                     <span style="margin-right:20px;"> 
                     <input type="datetime-local" id="StartTime" name="" value="2023-04-01 10:30" class="form-control groupName" style="background-color:#FFFFFF; width:250px !important;">
                     <a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
