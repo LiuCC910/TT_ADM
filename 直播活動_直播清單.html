@@ -925,7 +925,7 @@ String.prototype.endsWith = function(suffix) {
 					</td>
 				</tr>
 				<tr>
-					<td style="width:10%;">活動起日</td>
+					<td>活動起日</td>
                     <td>
 						<input type="date" id="createStartTime" name="companySupplierQuery.createStartTime" class="form-control groupName" style="cursor:pointer; background-color:#FFFFFF; width:150px; display:inline-block;">
 						<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
@@ -933,13 +933,38 @@ String.prototype.endsWith = function(suffix) {
 						<input type="date" id="createEndTime" name="companySupplierQuery.createEndTime" class="form-control groupName" style="cursor:pointer; background-color:#FFFFFF; width:150px; display:inline-block;">
 						<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
 					</td>
-					<td style="width:10%;">直播時間(起)</td>
+					<td>活動迄日</td>
+					<td>
+						<input type="date" id="createStartTime" name="companySupplierQuery.createStartTime" class="form-control groupName" style="cursor:pointer; background-color:#FFFFFF; width:150px; display:inline-block;">
+						<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
+						～  
+						<input type="date" id="createEndTime" name="companySupplierQuery.createEndTime" class="form-control groupName" style="cursor:pointer; background-color:#FFFFFF; width:150px; display:inline-block;">
+						<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
+					</td>
+				</tr>
+				<tr>
+					<td>直播時間(起)</td>
 					<td>
 						<input type="datetime-local" id="createStartTime" name="companySupplierQuery.createStartTime" class="form-control groupName" style="cursor:pointer; background-color:#FFFFFF; width:250px; display:inline-block;">
 						<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
 						～  
 						<input type="datetime-local" id="createEndTime" name="companySupplierQuery.createEndTime" class="form-control groupName" style="cursor:pointer; background-color:#FFFFFF; width:250px; display:inline-block;">
 						<a href="javascript:void(0)"><img src="images/if_remove-01_186389.png"></a>
+					</td>
+					<td>直播模式</td>
+				  <td>
+					<label class="containerdemo" style="display:inline-block; margin-right:15px;">全部
+						<input type="radio" checked="checked" name="radio3">
+						<span class="checkmarkradio"></span>
+					  </label>
+					  <label class="containerdemo" style="display:inline-block; margin-right:15px;">現場直播
+						<input type="radio" name="radio3">
+						<span class="checkmarkradio"></span>
+					  </label>
+					  <label class="containerdemo" style="display:inline-block; margin-right:15px;">錄影首播
+						<input type="radio" name="radio3">
+						<span class="checkmarkradio"></span>
+					  </label>
 					</td>
 				</tr>
                 <tr>
